@@ -1,0 +1,115 @@
+#!/usr/bin/env python3
+
+import argparse
+import json
+import sys
+from pathlib import Path
+
+
+def load_registry(repo_root: Path) -> dict:
+    registry_path = repo_root / "prompts" / "index.json"
+    try:
+        return json.loads(registry_path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        print(f"registry not found: {registry_path}", file=sys.stderr)
+        sys.exit(1)
+
+
+def matches_search(prompt: dict, needle: str) -> bool:
+    haystacks = [
+        prompt.get("id", ""),
+        prompt.get("title", ""),
+        prompt.get("purpose", ""),
+        " ".join(prompt.get("tags", [])),
+        " ".join(prompt.get("use_when", [])),
+    ]
+    needle = needle.lower()
+    return any(needle in hay.lower() for hay in haystacks)
+
+
+def find_prompt(prompts: list[dict], prompt_id: str) -> dict | None:
+    for prompt in prompts:
+        if prompt.get("id") == prompt_id:
+            return prompt
+    return None
+
+
+def print_summary(prompts: list[dict]) -> None:
+    for prompt in prompts:
+        tags = ", ".join(prompt.get("tags", []))
+        print(f"{prompt['id']}: {prompt.get('purpose', '')}")
+        print(f"  path: {prompt.get('path', '')}")
+        if tags:
+            print(f"  tags: {tags}")
+
+
+def print_detail(prompt: dict) -> None:
+    print(f"id: {prompt.get('id', '')}")
+    print(f"title: {prompt.get('title', '')}")
+    print(f"path: {prompt.get('path', '')}")
+    print(f"purpose: {prompt.get('purpose', '')}")
+    print("use_when:")
+    for item in prompt.get("use_when", []):
+        print(f"  - {item}")
+    print("inputs:")
+    for item in prompt.get("inputs", []):
+        print(f"  - {item}")
+    print("outputs:")
+    for item in prompt.get("outputs", []):
+        print(f"  - {item}")
+    print("related_prompts:")
+    for item in prompt.get("related_prompts", []):
+        print(f"  - {item}")
+    print("tags:")
+    for item in prompt.get("tags", []):
+        print(f"  - {item}")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="List and query prompt assets from prompts/index.json."
+    )
+    parser.add_argument("--tag", help="Filter prompts by tag.")
+    parser.add_argument("--id", dest="prompt_id", help="Show full detail for one prompt id.")
+    parser.add_argument(
+        "--related",
+        metavar="PROMPT_ID",
+        help="List related prompts for the given prompt id.",
+    )
+    parser.add_argument("--search", help="Search id, title, purpose, tags, and use_when.")
+    args = parser.parse_args()
+
+    repo_root = Path(__file__).resolve().parents[1]
+    registry = load_registry(repo_root)
+    prompts = registry.get("prompts", [])
+
+    if args.prompt_id:
+        prompt = find_prompt(prompts, args.prompt_id)
+        if not prompt:
+            print(f"prompt not found: {args.prompt_id}", file=sys.stderr)
+            sys.exit(1)
+        print_detail(prompt)
+        return
+
+    if args.related:
+        prompt = find_prompt(prompts, args.related)
+        if not prompt:
+            print(f"prompt not found: {args.related}", file=sys.stderr)
+            sys.exit(1)
+        related_ids = prompt.get("related_prompts", [])
+        related = [find_prompt(prompts, prompt_id) for prompt_id in related_ids]
+        related = [prompt for prompt in related if prompt is not None]
+        print_summary(related)
+        return
+
+    filtered = prompts
+    if args.tag:
+        filtered = [prompt for prompt in filtered if args.tag in prompt.get("tags", [])]
+    if args.search:
+        filtered = [prompt for prompt in filtered if matches_search(prompt, args.search)]
+
+    print_summary(filtered)
+
+
+if __name__ == "__main__":
+    main()

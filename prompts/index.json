@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "generated_manually": true,
+  "description": "Machine-readable registry of prompt assets for aiquan-kb human-agent collaboration.",
+  "prompts": [
+    {
+      "id": "daily-broadcast-ingest-and-discuss",
+      "path": "prompts/daily-broadcast-ingest-and-discuss.md",
+      "title": "Daily Broadcast Ingest And Discuss",
+      "purpose": "ingest one daily broadcast into the repo and immediately turn it into a kb-aware discussion about core ideas personal value and next questions",
+      "use_when": [
+        "a new daily 快刀廣播站 article should enter the repo",
+        "the user wants both ingest and a discussion based on existing kb context"
+      ],
+      "inputs": [
+        "source path or broadcast id",
+        "why it feels important today",
+        "optional current work context or question"
+      ],
+      "outputs": [
+        "ingest verdict",
+        "core views",
+        "relation to existing kb",
+        "likely value to the user",
+        "discussion hooks",
+        "suggested writeback targets"
+      ],
+      "related_prompts": [
+        "markdown-broadcast-ingest",
+        "theme-update",
+        "playbook-extraction",
+        "series-review"
+      ],
+      "tags": [
+        "daily",
+        "ingest",
+        "discussion",
+        "synthesis"
+      ]
+    },
+    {
+      "id": "markdown-broadcast-ingest",
+      "path": "prompts/markdown-broadcast-ingest.md",
+      "title": "Markdown Broadcast Ingest",
+      "purpose": "classify and ingest a markdown broadcast source while preserving provenance and deciding write targets",
+      "use_when": [
+        "the source already exists as a markdown file",
+        "the source comes from dedao/快刀廣播站"
+      ],
+      "inputs": [
+        "source path",
+        "why it should enter the repo",
+        "optional theme or series emphasis"
+      ],
+      "outputs": [
+        "ingest verdict",
+        "canonical naming recommendation",
+        "raw and broadcast action",
+        "related theme playbook and series targets"
+      ],
+      "related_prompts": [
+        "compare-broadcast-to-existing",
+        "theme-update",
+        "playbook-extraction"
+      ],
+      "tags": [
+        "ingest",
+        "markdown",
+        "provenance"
+      ]
+    },
+    {
+      "id": "ingest-review",
+      "path": "prompts/ingest-review.md",
+      "title": "Ingest Review",
+      "purpose": "review today's newly ingested broadcasts for net-new signal merge pressure and structural impact",
+      "use_when": [
+        "one or more new broadcast cards were added or updated today"
+      ],
+      "inputs": [
+        "today's new or updated broadcast cards",
+        "existing themes playbooks series and maps"
+      ],
+      "outputs": [
+        "daily ingest synthesis review",
+        "broadcast verdicts",
+        "theme playbook and series update suggestions"
+      ],
+      "related_prompts": [
+        "theme-update",
+        "playbook-extraction",
+        "repo-maintenance-review"
+      ],
+      "tags": [
+        "review",
+        "ingest",
+        "synthesis"
+      ]
+    },
+    {
+      "id": "compare-broadcast-to-existing",
+      "path": "prompts/compare-broadcast-to-existing.md",
+      "title": "Compare Broadcast To Existing",
+      "purpose": "compare a new broadcast against existing repo pages and decide whether it is net-new duplicate or revision pressure",
+      "use_when": [
+        "a new source looks similar to existing broadcasts themes or series"
+      ],
+      "inputs": [
+        "new broadcast or source",
+        "closest relevant pages in the repo"
+      ],
+      "outputs": [
+        "difference analysis",
+        "recommended write target",
+        "duplicate versus net-new judgment"
+      ],
+      "related_prompts": [
+        "markdown-broadcast-ingest",
+        "theme-update",
+        "series-review"
+      ],
+      "tags": [
+        "compare",
+        "broadcast",
+        "deduplication"
+      ]
+    },
+    {
+      "id": "theme-update",
+      "path": "prompts/theme-update.md",
+      "title": "Theme Update",
+      "purpose": "update a theme or map from a topic-first perspective rather than a single-broadcast perspective",
+      "use_when": [
+        "the user wants to advance a topic such as ai tools education productivity or adoption"
+      ],
+      "inputs": [
+        "target theme",
+        "new source or batch of sources",
+        "existing theme playbook and map pages"
+      ],
+      "outputs": [
+        "topic state before",
+        "theme updates",
+        "playbook or map update suggestions",
+        "open threads"
+      ],
+      "related_prompts": [
+        "compare-broadcast-to-existing",
+        "playbook-extraction",
+        "repo-maintenance-review"
+      ],
+      "tags": [
+        "topic",
+        "theme",
+        "map",
+        "synthesis"
+      ]
+    },
+    {
+      "id": "playbook-extraction",
+      "path": "prompts/playbook-extraction.md",
+      "title": "Playbook Extraction",
+      "purpose": "extract reusable methods and workflows from one or more broadcasts instead of leaving them as summaries",
+      "use_when": [
+        "one or more broadcasts contain clear actionable steps",
+        "the user wants to turn course content into repeatable practice"
+      ],
+      "inputs": [
+        "target broadcast or theme",
+        "intended user role or scenario"
+      ],
+      "outputs": [
+        "extracted method",
+        "proposed playbook structure",
+        "reuse boundaries"
+      ],
+      "related_prompts": [
+        "markdown-broadcast-ingest",
+        "theme-update",
+        "repo-maintenance-review"
+      ],
+      "tags": [
+        "playbook",
+        "workflow",
+        "practical"
+      ]
+    },
+    {
+      "id": "series-review",
+      "path": "prompts/series-review.md",
+      "title": "Series Review",
+      "purpose": "review a recurring course series and compile its accumulated patterns evolution and strongest pages",
+      "use_when": [
+        "the user wants to review a recurring column or series",
+        "multiple broadcasts belong to the same named series"
+      ],
+      "inputs": [
+        "target series",
+        "related broadcasts"
+      ],
+      "outputs": [
+        "series summary",
+        "recurring patterns",
+        "strongest representative broadcasts",
+        "suggested theme and playbook updates"
+      ],
+      "related_prompts": [
+        "compare-broadcast-to-existing",
+        "theme-update",
+        "repo-maintenance-review"
+      ],
+      "tags": [
+        "series",
+        "review",
+        "synthesis"
+      ]
+    },
+    {
+      "id": "repo-maintenance-review",
+      "path": "prompts/repo-maintenance-review.md",
+      "title": "Repo Maintenance Review",
+      "purpose": "review repo structure for cleanup merge opportunities and navigation improvements without ingesting new sources",
+      "use_when": [
+        "there is no new source to ingest",
+        "the user wants to improve repo structure and navigability"
+      ],
+      "inputs": [
+        "index",
+        "maps",
+        "themes",
+        "playbooks",
+        "series",
+        "recent broadcast cards"
+      ],
+      "outputs": [
+        "structure issues",
+        "cleanup suggestions",
+        "top next actions"
+      ],
+      "related_prompts": [
+        "theme-update",
+        "playbook-extraction",
+        "ingest-review"
+      ],
+      "tags": [
+        "review",
+        "maintenance",
+        "structure"
+      ]
+    }
+  ]
+}
