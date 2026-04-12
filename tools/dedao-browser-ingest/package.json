@@ -1,0 +1,13 @@
+{
+  "name": "dedao-browser-ingest",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Browser-attached raw capture tool for aiquan-kb daily Dedao ingest",
+  "scripts": {
+    "start": "node run.js",
+    "check": "node --check run.js"
+  },
+  "dependencies": {
+    "playwright-core": "^1.54.0"
+  }
+}

@@ -14,12 +14,16 @@
 - 課程設計本身是可編譯的知識，不只是營運信息
 - 不同熟練度的學員需要不同入口
 - task-first learning 往往比概念先行更能推動 AI 工具上手
+- 好的學習與探索環境不只提供正確答案，也要保留多樣候選與可見過程，幫助使用者延長探索
+- 面向受限人群或高摩擦場景時，教學與產品設計都要從真實限制出發，而不是從理想能力出發
 
 ## Representative Broadcasts
 
 - [353](../broadcasts/353.md)
 - [603](../broadcasts/603.md)
 - [700](../broadcasts/700.md)
+- [816](../broadcasts/816.md)
+- [817](../broadcasts/817.md)
 
 ## Related Playbooks
 

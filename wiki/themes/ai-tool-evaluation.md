@@ -13,12 +13,15 @@
 - 工具介紹應區分新鮮感與長期價值
 - 最值得沉澱的是評估方法，不是工具名單本身
 - 帶有具體步驟的工具課文應反推出 playbook
+- AI 工具的價值不只看是否節省時間，也要看它是否擴大探索空間與改變思考路徑
+- 顯性採納率不是唯一指標，隱性行為改變同樣是評估重點
 
 ## Representative Broadcasts
 
 - [422](../broadcasts/422.md)
 - [783](../broadcasts/783.md)
 - [812](../broadcasts/812.md)
+- [817](../broadcasts/817.md)
 
 ## Related Playbooks
 

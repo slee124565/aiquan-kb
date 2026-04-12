@@ -44,6 +44,7 @@
 - [Prompt Assets](prompts/README.md)
 - [Prompt Registry](prompts/index.json)
 - `tools/list-prompts`
+- [Dedao Browser Ingest](tools/dedao-browser-ingest/README.md)
 
 ## Templates
 

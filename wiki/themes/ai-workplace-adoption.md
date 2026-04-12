@@ -14,6 +14,8 @@
 - 可遷移的工作流、案例與判斷框架，比單一新聞更有長期價值
 - 團隊層落地通常需要示例、角色分工與最小可行方法
 - workflow redesign 往往比工具選型本身更具決定性
+- adoption 成敗常取決於是否跨過真實使用限制，例如設備、網路、操作習慣與風險邊界
+- 在高風險場景裡，模型能力只是其中一層，還需要硬規則與明確護欄共同落地
 
 ## Representative Broadcasts
 
@@ -22,6 +24,7 @@
 - [573](../broadcasts/573.md)
 - [783](../broadcasts/783.md)
 - [802](../broadcasts/802.md)
+- [816](../broadcasts/816.md)
 
 ## Related Playbooks
 

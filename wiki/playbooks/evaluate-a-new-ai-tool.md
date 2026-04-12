@@ -17,12 +17,16 @@
 3. 用一個真實任務快速試跑
 4. 記錄使用門檻、輸出品質、可持續性與替代成本
 5. 決定它應留在工具名單、theme 頁，還是升級成實作 playbook 來源
+6. 若它主要價值不是提速，而是擴大探索空間，應明確把這點納入評估
+7. 若它面向的是受限場景，應用真實替代方案而不是理想化專業服務當對照組
 
 ## Signals From Broadcasts
 
 - [422](../broadcasts/422.md)
 - [783](../broadcasts/783.md)
 - [812](../broadcasts/812.md)
+- [816](../broadcasts/816.md)
+- [817](../broadcasts/817.md)
 
 ## Boundaries
 

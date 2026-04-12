@@ -11,6 +11,10 @@ from pathlib import Path
 ID_PATTERN = re.compile(r"^(\d+)")
 
 
+def is_url(value: str) -> bool:
+    return value.startswith("http://") or value.startswith("https://")
+
+
 def load_registry(repo_root: Path) -> dict[str, dict]:
     registry_path = repo_root / "raw" / "ingest-registry.tsv"
     try:
@@ -60,11 +64,22 @@ def determine_verdict(
         return "new", "not-in-registry"
 
     normalized_source_path = normalize_source_path(source_path, workspace_root)
-    if existing["source_path"] != normalized_source_path:
+    existing_source_path = existing["source_path"]
+    same_provenance_family = (
+        (is_url(existing_source_path) and not is_url(normalized_source_path))
+        or (not is_url(existing_source_path) and is_url(normalized_source_path))
+    )
+
+    if existing_source_path != normalized_source_path and not same_provenance_family:
         return "manual-review", "broadcast-id-conflicts-with-different-source-path"
 
     if existing["source_hash"] == source_hash:
+        if existing_source_path != normalized_source_path and same_provenance_family:
+            return "skip", "same-broadcast-id-same-hash-different-provenance"
         return "skip", "same-broadcast-id-and-same-hash"
+
+    if existing_source_path != normalized_source_path and same_provenance_family:
+        return "update-if-changed", "same-broadcast-id-hash-differs-different-provenance"
 
     return "update-if-changed", "same-broadcast-id-but-hash-differs"
 

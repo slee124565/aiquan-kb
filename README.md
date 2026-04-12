@@ -149,6 +149,39 @@
   放可重用的 prompt assets 與 agent interaction starters
 - `tools/`
   放 repo-local tools；`tools/list-prompts` 可查詢 prompt registry
+  `tools/dedao-browser-ingest/` 則負責 direct Dedao browser raw capture + registry update
+
+**Daily Raw Ingest**
+
+若你想讓 `aiquan-kb` 單獨執行每日新文章 ingest，請直接看：
+
+- [tools/dedao-browser-ingest/README.md](tools/dedao-browser-ingest/README.md)
+
+這條流程目前只負責：
+
+- raw capture
+- `raw/ingest-registry.tsv` update
+- next-article incremental state
+
+不負責：
+
+- `wiki/broadcasts/` writeback
+- themes / playbooks / series / maps compile
+
+注意：
+
+- browser profile、cursor state、debug artifacts 屬於本機 operational state，預設放在 `~/Library/Application Support/aiquan-kb/dedao-browser-ingest/`
+- subtree repo 只版本化 raw source、registry 與工具程式本身
+
+這代表 daily ingest 的完整路徑應是：
+
+`tools/dedao-browser-ingest` 先抓新文章進 `raw/`
+
+然後再由 agent 針對該 raw source 執行單篇 compile，完成：
+
+- `wiki/broadcasts/` writeback
+- theme / playbook / series / map 更新
+- `log.md` 紀錄
 
 **Canonical Naming**
 
