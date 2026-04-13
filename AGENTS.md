@@ -103,19 +103,17 @@
 
 - `prompts/daily-broadcast-ingest-and-discuss.md`
 
-這表示 agent 不應只做收錄，而應在 ingest 後固定提供一份 discussion-ready output，至少包含：
+這表示 agent 不應只做收錄，而應在 ingest 後固定提供一份用來訓練「每日 AI 訊息品味能力」的輸出，至少包含：
 
 1. `Core View`
    這篇最重要的核心觀點
-2. `Relation To Existing KB`
-   它和既有 theme / playbook / series / map / 舊 broadcast 的關係
-3. `Why It Might Matter To Me`
-   如果結合使用者當前關注脈絡，這篇最可能的價值
-4. `Practical Use`
-   今天就可以採取的具體使用方式
-5. `Discussion Hooks`
-   最值得繼續追問的問題
-6. `Writeback Suggestion`
+2. `Compare`
+   它和既有 theme / playbook / series / map / 舊 broadcast 的關係、它修正了哪個判準
+3. `Extend`
+   如果這篇成立，接下來最值得追問與採取的延伸動作
+4. `Taste Training Note`
+   這篇最值得練的比較能力與延伸能力
+5. `Writeback Suggestion`
    哪些內容只留在 broadcast card，哪些值得 merge 到更高層
 
 若使用者沒有明確指定 prompt，但語意上是在做「日更 ingest + 討論」，也應自動採用這個互動模式。
@@ -133,9 +131,9 @@
 若是日更單篇 ingest，除了上述動作外，預設還要立刻用既有 KB 回答：
 
 - 這篇的核心觀點
-- 它與既有 KB 的關係
-- 對使用者最可能有價值的使用方式
-- 接下來值得追問的問題
+- 它和既有 KB 之間最值得做的比較
+- 如果這篇成立，接下來最值得做的延伸
+- 這篇最值得練的比較能力與延伸能力
 
 若來源是從 workspace 其他位置匯入：
 

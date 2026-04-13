@@ -77,16 +77,15 @@
 這個入口的預設輸出不是「已收錄」，而是：
 
 1. `Core View`
-   這篇最重要的 3 到 5 個核心觀點
-2. `Relation To Existing KB`
+   這篇最重要的 1 到 3 個核心觀點
+2. `Compare`
    它和 repo 裡哪些 theme / playbook / series / map / 舊 broadcast 最相關
-3. `Why It Might Matter To Me`
-   如果結合你目前的工作與關注脈絡，這篇最可能有價值的方向
-4. `Practical Use`
-   如果你今天就要把這篇用起來，最值得採取的 1 到 3 個用法
-5. `Discussion Hooks`
-   接下來最值得繼續問 agent 的 3 到 5 個問題
-6. `Writeback Suggestion`
+   它修正了你原本哪個判準
+3. `Extend`
+   如果這篇成立，接下來最值得追問的問題、最值得採取的用法與最值得推動的 writeback
+4. `Taste Training Note`
+   這篇最值得你練的比較能力與延伸能力
+5. `Writeback Suggestion`
    哪些內容只該留在單篇，哪些值得回寫到 theme / playbook / series / map
 
 你可以直接這樣對 agent 說：
@@ -149,6 +148,7 @@
   放可重用的 prompt assets 與 agent interaction starters
 - `tools/`
   放 repo-local tools；`tools/list-prompts` 可查詢 prompt registry
+  `tools/scan-dedao-ingest` 可掃描 workspace 內 `dedao/快刀廣播站` markdown 並對照 `raw/ingest-registry.tsv` 做 ingest verdict
   `tools/dedao-browser-ingest/` 則負責 direct Dedao browser raw capture + registry update
 
 **Daily Raw Ingest**
@@ -156,6 +156,10 @@
 若你想讓 `aiquan-kb` 單獨執行每日新文章 ingest，請直接看：
 
 - [tools/dedao-browser-ingest/README.md](tools/dedao-browser-ingest/README.md)
+
+若你今天的來源不是從瀏覽器直接抓，而是先想盤點 workspace 內現有的 `dedao/快刀廣播站/*.md` 是否已進 repo，可先用：
+
+- `tools/scan-dedao-ingest`
 
 這條流程目前只負責：
 
@@ -172,6 +176,26 @@
 
 - browser profile、cursor state、debug artifacts 屬於本機 operational state，預設放在 `~/Library/Application Support/aiquan-kb/dedao-browser-ingest/`
 - subtree repo 只版本化 raw source、registry 與工具程式本身
+
+`tools/scan-dedao-ingest` 的角色則不同。它不做 browser capture，而是：
+
+- 掃描上游 `dedao/快刀廣播站` markdown 檔
+- 依檔名開頭抽出 `broadcast_id`
+- 對照 `raw/ingest-registry.tsv` 比較 `source_hash` 與 provenance
+- 輸出 `new`、`skip`、`update-if-changed`、`manual-review` verdict
+
+適合情境：
+
+- 想先知道 workspace 裡哪些課文還沒 ingest
+- 想檢查某篇 markdown 是否和 registry 已收錄內容一致
+- 想在手動 markdown ingest 前先做一次對帳
+
+最小例子：
+
+```bash
+tools/scan-dedao-ingest --only new
+tools/scan-dedao-ingest --id 812
+```
 
 這代表 daily ingest 的完整路徑應是：
 

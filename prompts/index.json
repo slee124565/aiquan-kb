@@ -7,10 +7,11 @@
       "id": "daily-broadcast-ingest-and-discuss",
       "path": "prompts/daily-broadcast-ingest-and-discuss.md",
       "title": "Daily Broadcast Ingest And Discuss",
-      "purpose": "ingest one daily broadcast into the repo and immediately turn it into a kb-aware discussion about core ideas personal value and next questions",
+      "purpose": "ingest one daily broadcast into the repo and immediately turn it into a kb-aware discussion that trains daily AI taste through comparison and extension",
       "use_when": [
         "a new daily 快刀廣播站 article should enter the repo",
-        "the user wants both ingest and a discussion based on existing kb context"
+        "the user wants both ingest and a discussion based on existing kb context",
+        "the user wants to train daily AI taste through comparison and extension"
       ],
       "inputs": [
         "source path or broadcast id",
@@ -19,10 +20,10 @@
       ],
       "outputs": [
         "ingest verdict",
-        "core views",
-        "relation to existing kb",
-        "likely value to the user",
-        "discussion hooks",
+        "core view",
+        "compare",
+        "extend",
+        "taste training note",
         "suggested writeback targets"
       ],
       "related_prompts": [
@@ -35,7 +36,8 @@
         "daily",
         "ingest",
         "discussion",
-        "synthesis"
+        "synthesis",
+        "taste"
       ]
     },
     {

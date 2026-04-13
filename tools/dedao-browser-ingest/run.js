@@ -311,6 +311,20 @@ function patchSessionState(state, sessionKey, patch) {
   };
 }
 
+function findLatestSuccessfulArticleUrl(registry) {
+  const urlRows = registry.rows
+    .filter((row) => /^https?:\/\//.test(row.source_path || ""))
+    .filter((row) => row.status === "captured" || row.status === "updated")
+    .slice()
+    .sort((a, b) => {
+      const dateCompare = String(a.imported_at || "").localeCompare(String(b.imported_at || ""));
+      if (dateCompare !== 0) return dateCompare;
+      return String(a.broadcast_id || "").localeCompare(String(b.broadcast_id || ""), undefined, { numeric: true });
+    });
+
+  return urlRows.length ? urlRows[urlRows.length - 1].source_path : "";
+}
+
 function normalizePublishedDate(text, referenceDate = new Date()) {
   const value = String(text || "").trim();
   const match = value.match(/(\d{4})年(\d{1,2})月(\d{1,2})日/);
@@ -478,10 +492,11 @@ async function extractArticle(page) {
     const timeText = rawTimeText.replace(/\s*首次发布:\s*/, "").trim();
     const authorText = normalizeText(infoElement?.querySelector(".course-title")?.innerText || "");
     const publishText = normalizeText(infoElement?.querySelector(".article-publish-time")?.innerText || "");
+    const pageUrl = window.location.href || "";
     const sourceUrl = getSourceUrl();
     const sourceId = (() => {
       try {
-        return new URL(sourceUrl || window.location.href).searchParams.get("id") || "";
+        return new URL(pageUrl || sourceUrl || window.location.href).searchParams.get("id") || "";
       } catch (_) {
         return "";
       }
@@ -508,12 +523,13 @@ async function extractArticle(page) {
       timeText,
       publishText,
       authorText,
+      pageUrl,
       sourceUrl,
       sourceId,
       articleSerial,
       bodyFingerprint,
       markdown: `${parts.join("\n\n").trim()}\n`,
-      articleKey: [sourceId || sourceUrl, articleSerial, titleText, timeText, bodyFingerprint].filter(Boolean).join(" | "),
+      articleKey: [sourceId || pageUrl || sourceUrl, articleSerial, titleText, timeText, bodyFingerprint].filter(Boolean).join(" | "),
     };
   });
 }
@@ -678,7 +694,9 @@ async function main() {
   const state = loadState();
   const sessionState = getSessionState(state, sessionKey);
   const registry = loadRegistry();
-  const startUrl = forceUrl ? seedUrl : (sessionState.last_ingested_url || seedUrl);
+  const latestRegistryUrl = findLatestSuccessfulArticleUrl(registry);
+  const rememberedUrl = sessionState.last_ingested_url || latestRegistryUrl;
+  const startUrl = forceUrl ? seedUrl : (rememberedUrl || seedUrl);
 
   console.log(`session key: ${sessionKey}`);
   console.log(`chrome user data dir: ${normalizePathForStorage(chromeUserDataDir)}`);
@@ -702,6 +720,7 @@ async function main() {
       last_run_status: "bootstrapped",
       last_checked_at: new Date().toISOString(),
       last_run_new_count: 0,
+      last_ingested_url: rememberedUrl || "",
     });
     saveState(state);
     console.log("bootstrap completed");
@@ -747,7 +766,7 @@ async function main() {
   }
 
   let currentArticle = await extractArticle(page);
-  if (sessionState.last_ingested_url && !forceUrl && !includeStart) {
+  if (rememberedUrl && !forceUrl && !includeStart) {
     try {
       currentArticle = await advanceToDistinctNextArticle(page, currentArticle, "增量起點切換");
     } catch (error) {
@@ -773,7 +792,8 @@ async function main() {
     const broadcastId = deriveBroadcastId({ ...article, published });
     const year = (published || importedAt).slice(0, 4);
     const sourceHash = hashContent(article.markdown);
-    const sourcePath = article.sourceUrl || page.url();
+    const articlePageUrl = article.pageUrl || page.url();
+    const sourcePath = articlePageUrl || article.sourceUrl || page.url();
     const { verdict } = determineRegistryVerdict({ broadcastId, published }, registry, sourceHash);
     const runIdentity = article.sourceId || broadcastId || article.articleKey;
 

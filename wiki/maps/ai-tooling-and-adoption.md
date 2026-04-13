@@ -33,8 +33,10 @@
 - [812](../broadcasts/812.md)
 - [786](../broadcasts/786.md)
 - [783](../broadcasts/783.md)
+- [818](../broadcasts/818.md)
 
 ## Open Threads
 
 - 課程裡哪些工具信號值得被提升成穩定工作流
 - 介紹工具與訓練 adoption 的最佳分層應是什麼
+- 使用者如何把自己的「好答案判準」外部化成可重用的 AI 協作流程
