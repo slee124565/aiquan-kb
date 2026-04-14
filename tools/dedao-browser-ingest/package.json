@@ -5,7 +5,8 @@
   "description": "Browser-attached raw capture tool for aiquan-kb daily Dedao ingest",
   "scripts": {
     "start": "node run.js",
-    "check": "node --check run.js"
+    "check": "node --check run.js",
+    "bootstrap": "npm install && node -e \"require('playwright-core'); console.log('playwright-core ok')\""
   },
   "dependencies": {
     "playwright-core": "^1.54.0"

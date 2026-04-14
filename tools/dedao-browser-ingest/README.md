@@ -33,7 +33,7 @@
 
 ```bash
 cd publishes/aiquan-kb/tools/dedao-browser-ingest
-npm install
+npm run bootstrap
 ```
 
 **用法**
@@ -75,7 +75,7 @@ node run.js --count 3
 
 ```bash
 cd publishes/aiquan-kb/tools/dedao-browser-ingest
-npm install
+npm run bootstrap
 ```
 
 2. 從你日常 Chrome 的 `Default` profile bootstrap 一份 dedicated automation profile
