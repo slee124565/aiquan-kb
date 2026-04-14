@@ -4,12 +4,14 @@ purpose: ingest one daily broadcast into the repo and immediately turn it into a
 use_when:
   - a new daily 快刀廣播站 article should enter the repo
   - the user wants both ingest and a discussion based on existing kb context
+  - the agent should auto-discover the latest unprocessed candidate when no source is provided
 inputs:
   - source path or broadcast id
   - why it feels important today
   - optional current work context or question
 outputs:
   - ingest verdict
+  - single best candidate when source is not specified
   - core view
   - compare
   - extend
@@ -36,27 +38,33 @@ tags:
 
 ## Goal
 
-把單篇日更課文變成：
+把單篇日更課文，或自動找到的 1 篇最新未處理候選，變成：
 
 1. repo-aware ingest
 2. kb-aware synthesis
 3. comparison-ready output
 4. extension-ready output
 5. taste-training note
-4. 後續 writeback 候選
+6. 後續 writeback 候選
 
 ## Prompt
 
 ```md
 請處理今天這篇快刀廣播站課文。
 
-來源：______
+如果我已提供來源，直接處理那一篇。
+如果我沒有提供來源，請直接自行找出目前最新且尚未完整完成 ingest / compile / writeback 的 1 篇候選。
+
+來源 path（若已知）：______
 我今天注意到它，因為 ______。
 如果 relevant，我現在的工作 / 關注點是：______。
 
-請先做正常的 repo-aware ingest judgment：
+請先做 repo-aware ingest judgment：
 - 檢查 dedupe / registry / 既有 broadcast
 - 判斷 raw / broadcast / theme / playbook / series / map 應更新到哪一層
+
+若遇到 provenance 不一致、id 衝突、或無法確認是否已 compile / writeback，標成 manual-review 並換下一篇。
+若已完整完成 ingest / compile / writeback，跳過並往下找，直到找到第一篇真正值得處理的候選。
 
 然後不要只回報已收錄，請再結合既有 KB 給我一份用來訓練「每日 AI 訊息品味能力」的輸出，至少回答：
 
@@ -81,12 +89,14 @@ tags:
    哪些內容只該留在 broadcast card
    哪些值得進一步 merge 到 theme / playbook / series / map
 
-若這篇價值有限，也請照樣簡短回答上述五點，但清楚標示它應停留在哪一層。
+若這篇價值有限，也請簡短回答上述五點，並標示應停留在哪一層。
+若是自動找候選，請先給出你選中的 1 篇與理由，再進入上述五點。
 ```
 
 ## Expected Output
 
 - Ingest verdict
+- Single best candidate when applicable
 - Core view
 - Compare
 - Extend
