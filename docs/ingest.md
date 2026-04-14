@@ -6,7 +6,7 @@
 
 **日更流程**
 
-1. 從 `dedao/快刀廣播站/{basename}.md` 選出要匯入的來源
+1. 從現成 markdown source 選出要匯入的來源
    - 若走 browser ingest 日更模式，可直接從專用 automation Chrome profile 的 Dedao article page 擷取到 `raw/sources/YYYY/`
 2. 判斷 `broadcast_id`
    - 預設取檔名開頭數字

@@ -36,7 +36,7 @@ tags:
 
 - 優先選最貼近當前任務的 prompt，不要每次都用萬用 prompt
 - prompt 的目標應是驅動 repo-level 判斷，而不只是重做摘要
-- 若來源已經是 `dedao/快刀廣播站/*.md` 或其他 markdown 檔，優先使用 ingest 類 prompt
+- 若來源已經是 markdown 檔，優先使用 ingest 類 prompt
 - 若任務重點是方法萃取，優先用 playbook 類 prompt
 - 若任務重點是系列回顧，優先用 series 類 prompt
 

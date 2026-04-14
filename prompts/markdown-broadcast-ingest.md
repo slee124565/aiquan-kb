@@ -3,7 +3,7 @@ id: markdown-broadcast-ingest
 purpose: classify and ingest a markdown broadcast source while preserving provenance and deciding write targets
 use_when:
   - the source already exists as a markdown file
-  - the source comes from dedao/快刀廣播站
+  - the source comes from an external workspace or local markdown source
 inputs:
   - source path
   - why it should enter the repo
@@ -27,7 +27,7 @@ tags:
 
 ## Use When
 
-當來源本身已經是 `dedao/快刀廣播站/*.md` 或其他 markdown 檔。
+當來源本身已經是 markdown 檔。
 
 ## Goal
 

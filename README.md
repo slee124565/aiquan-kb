@@ -56,7 +56,7 @@
 **日常最佳互動情境**
 
 1. `快速收錄一篇課文`
-   你丟一篇 `dedao/快刀廣播站/*.md`，agent 判斷它應進哪個 year/source 路徑、建立 broadcast card，並指出應 merge 到哪些 theme / playbook / series。
+   你丟一篇現成 markdown source，agent 判斷它應進哪個 year/source 路徑、建立 broadcast card，並指出應 merge 到哪些 theme / playbook / series。
 2. `日更收錄並立刻討論`
    你今天只有一篇新課文，但不想只收錄。agent 應在 ingest 之後，立刻用既有 KB 回你這篇的核心觀點、它和舊內容的關係、對你可能有價值的使用方式，以及接下來最值得追問的問題。
 3. `追一個課程主題`
@@ -93,7 +93,7 @@
 ```md
 請用 `daily-broadcast-ingest-and-discuss` 處理今天這篇快刀廣播站課文。
 
-來源：dedao/快刀廣播站/xxx.md
+來源：publishes/aiquan-kb/raw/sources/2026/xxx.md
 我今天注意到它，因為 ______。
 我現在特別關心的是 ______。
 ```
@@ -148,8 +148,7 @@
   放可重用的 prompt assets 與 agent interaction starters
 - `tools/`
   放 repo-local tools；`tools/list-prompts` 可查詢 prompt registry
-  `tools/scan-dedao-ingest` 可掃描 workspace 內 `dedao/快刀廣播站` markdown 並對照 `raw/ingest-registry.tsv` 做 ingest verdict
-  `tools/dedao-browser-ingest/` 則負責 direct Dedao browser raw capture + registry update
+  `tools/dedao-browser-ingest/` 則負責 browser raw capture + registry update
 
 **Daily Raw Ingest**
 
@@ -157,45 +156,12 @@
 
 - [tools/dedao-browser-ingest/README.md](tools/dedao-browser-ingest/README.md)
 
-若你今天的來源不是從瀏覽器直接抓，而是先想盤點 workspace 內現有的 `dedao/快刀廣播站/*.md` 是否已進 repo，可先用：
-
-- `tools/scan-dedao-ingest`
-
-這條流程目前只負責：
-
-- raw capture
-- `raw/ingest-registry.tsv` update
-- next-article incremental state
-
-不負責：
-
-- `wiki/broadcasts/` writeback
-- themes / playbooks / series / maps compile
+若你今天的來源不是從瀏覽器直接抓，而是已經有現成 markdown source，可直接用 `prompts/markdown-broadcast-ingest.md`。
 
 注意：
 
 - browser profile、cursor state、debug artifacts 屬於本機 operational state，預設放在 `~/Library/Application Support/aiquan-kb/dedao-browser-ingest/`
 - subtree repo 只版本化 raw source、registry 與工具程式本身
-
-`tools/scan-dedao-ingest` 的角色則不同。它不做 browser capture，而是：
-
-- 掃描上游 `dedao/快刀廣播站` markdown 檔
-- 依檔名開頭抽出 `broadcast_id`
-- 對照 `raw/ingest-registry.tsv` 比較 `source_hash` 與 provenance
-- 輸出 `new`、`skip`、`update-if-changed`、`manual-review` verdict
-
-適合情境：
-
-- 想先知道 workspace 裡哪些課文還沒 ingest
-- 想檢查某篇 markdown 是否和 registry 已收錄內容一致
-- 想在手動 markdown ingest 前先做一次對帳
-
-最小例子：
-
-```bash
-tools/scan-dedao-ingest --only new
-tools/scan-dedao-ingest --id 812
-```
 
 這代表 daily ingest 的完整路徑應是：
 
@@ -224,14 +190,13 @@ tools/scan-dedao-ingest --id 812
 
 **與現有 workspace 的關係**
 
-目前原始課文已存在 `dedao/快刀廣播站/`。
+目前原始課文的正式落點是 `raw/sources/`。
 
-這個 repo 的 ingest 原則不是直接把該目錄當 live source，而是：
+這個 repo 的 ingest 原則不是依賴外部工作區作為 live source，而是：
 
-1. 從 `dedao/快刀廣播站/{basename}.md` 匯入
-2. 複製到 `raw/sources/YYYY/`
-3. 在 metadata 裡保留原始 workspace path
-4. 讓 `raw/` 成為本 repo 的 source of truth
+1. 將外部 markdown source 匯入 `raw/sources/YYYY/`
+2. 在 metadata 裡保留原始來源路徑或 provenance
+3. 讓 `raw/` 成為本 repo 的 source of truth
 
 這樣 subtree / GitHub repo 才能獨立存在，不依賴主 workspace 的路徑結構。
 

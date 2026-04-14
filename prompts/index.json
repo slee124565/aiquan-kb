@@ -47,7 +47,7 @@
       "purpose": "classify and ingest a markdown broadcast source while preserving provenance and deciding write targets",
       "use_when": [
         "the source already exists as a markdown file",
-        "the source comes from dedao/快刀廣播站"
+        "the source comes from an external browser capture or local markdown source"
       ],
       "inputs": [
         "source path",
