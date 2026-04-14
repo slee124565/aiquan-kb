@@ -23,8 +23,11 @@
 - [Turn A Broadcast Into Team Action](wiki/playbooks/turn-a-broadcast-into-team-action.md)
 
 ## Recurring Series
-
+- [DeepSeek 开源周](wiki/series/deepseek-open-source-week.md)
 - [AI龙虾十日谈](wiki/series/ai-lobster-ten-days.md)
+- [AI教育观察：美国行](wiki/series/ai-education-observation-us-trip.md)
+- [黄仁勋：英伟达之芯共读](wiki/series/jensen-huang-nvidia-book-club.md)
+- [年度对话](wiki/series/yearly-dialogues.md)
 - [教程上新](wiki/series/tutorial-launches.md)
 - [周日荐书与荐文](wiki/series/weekend-recommendations.md)
 - [年度观察](wiki/series/yearly-observations.md)
