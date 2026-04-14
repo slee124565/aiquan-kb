@@ -16,6 +16,9 @@
 - workflow redesign 往往比工具選型本身更具決定性
 - adoption 成敗常取決於是否跨過真實使用限制，例如設備、網路、操作習慣與風險邊界
 - 在高風險場景裡，模型能力只是其中一層，還需要硬規則與明確護欄共同落地
+- AI 使用若沒有降低返工或協作摩擦，個人提速很容易被團隊成本吃掉
+- 披露 AI 使用不一定加分，信任還取決於角色、情境與輸出品質
+- 新人與基礎職位的 AI adoption，還要顧到技能是否被過早外包掉
 
 ## Representative Broadcasts
 
@@ -38,6 +41,17 @@
 - [783](../broadcasts/783.md)
 - [802](../broadcasts/802.md)
 - [816](../broadcasts/816.md)
+- [819](../broadcasts/819.md)
+- [232](../broadcasts/232.md)
+- [725](../broadcasts/725.md)
+- [730](../broadcasts/730.md)
+- [736](../broadcasts/736.md)
+- [777](../broadcasts/777.md)
+- [779](../broadcasts/779.md)
+- [780](../broadcasts/780.md)
+- [782](../broadcasts/782.md)
+- [784](../broadcasts/784.md)
+- [785](../broadcasts/785.md)
 - [451](../broadcasts/451.md)
 - [459](../broadcasts/459.md)
 - [460](../broadcasts/460.md)
@@ -65,6 +79,24 @@
 - [694](../broadcasts/694.md)
 - [699](../broadcasts/699.md)
 - [704](../broadcasts/704.md)
+- [737](../broadcasts/737.md)
+- [787](../broadcasts/787.md)
+- [788](../broadcasts/788.md)
+- [789](../broadcasts/789.md)
+- [744](../broadcasts/744.md)
+- [795](../broadcasts/795.md)
+- [798](../broadcasts/798.md)
+- [800](../broadcasts/800.md)
+- [801](../broadcasts/801.md)
+- [755](../broadcasts/755.md)
+- [756](../broadcasts/756.md)
+- [760](../broadcasts/760.md)
+- [767](../broadcasts/767.md)
+- [768](../broadcasts/768.md)
+- [772](../broadcasts/772.md)
+- [774](../broadcasts/774.md)
+- [809](../broadcasts/809.md)
+- [810](../broadcasts/810.md)
 
 ## Related Playbooks
 

@@ -20,6 +20,7 @@
 - [369](../broadcasts/369.md)
 - [390](../broadcasts/390.md)
 - [397](../broadcasts/397.md)
+- [726](../broadcasts/726.md)
 - [817](../broadcasts/817.md)
 - [446](../broadcasts/446.md)
 - [453](../broadcasts/453.md)

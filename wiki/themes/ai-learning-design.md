@@ -16,6 +16,7 @@
 - task-first learning 往往比概念先行更能推動 AI 工具上手
 - 好的學習與探索環境不只提供正確答案，也要保留多樣候選與可見過程，幫助使用者延長探索
 - 面向受限人群或高摩擦場景時，教學與產品設計都要從真實限制出發，而不是從理想能力出發
+- 若新人過早把基礎動作交給 AI，學習路徑可能被截斷，設計教學時要保留練習與判斷的機會
 
 ## Representative Broadcasts
 
@@ -37,6 +38,7 @@
 - [700](../broadcasts/700.md)
 - [816](../broadcasts/816.md)
 - [817](../broadcasts/817.md)
+- [819](../broadcasts/819.md)
 - [442](../broadcasts/442.md)
 - [446](../broadcasts/446.md)
 - [454](../broadcasts/454.md)
@@ -72,6 +74,23 @@
 - [718](../broadcasts/718.md)
 - [719](../broadcasts/719.md)
 - [720](../broadcasts/720.md)
+- [742](../broadcasts/742.md)
+- [743](../broadcasts/743.md)
+- [746](../broadcasts/746.md)
+- [749](../broadcasts/749.md)
+- [750](../broadcasts/750.md)
+- [751](../broadcasts/751.md)
+- [758](../broadcasts/758.md)
+- [761](../broadcasts/761.md)
+- [764](../broadcasts/764.md)
+- [787](../broadcasts/787.md)
+- [789](../broadcasts/789.md)
+- [796](../broadcasts/796.md)
+- [801](../broadcasts/801.md)
+- [806](../broadcasts/806.md)
+- [734](../broadcasts/734.md)
+- [735](../broadcasts/735.md)
+- [736](../broadcasts/736.md)
 
 ## Related Playbooks
 
