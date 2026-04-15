@@ -20,6 +20,7 @@
 - AI 使用若沒有降低返工或協作摩擦，個人提速很容易被團隊成本吃掉
 - 披露 AI 使用不一定加分，信任還取決於角色、情境與輸出品質
 - 新人與基礎職位的 AI adoption，還要顧到技能是否被過早外包掉
+- 在高度專業任務裡，最有效的 adoption 往往不是端到端自動化，而是先把專家如何拆解問題、判斷中間證據的骨架外化，再讓 AI 接到那條骨架上
 
 ## Representative Broadcasts
 
@@ -43,6 +44,7 @@
 - [802](../broadcasts/802.md)
 - [816](../broadcasts/816.md)
 - [819](../broadcasts/819.md)
+- [821](../broadcasts/821.md)
 - [232](../broadcasts/232.md)
 - [725](../broadcasts/725.md)
 - [730](../broadcasts/730.md)

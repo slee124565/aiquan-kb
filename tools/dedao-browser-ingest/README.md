@@ -98,6 +98,11 @@ node run.js --url "https://www.dedao.cn/course/article?id=..." --include-start -
 node run.js --count 1
 ```
 
+說明：
+
+- `--launch-only` 會保留 automation Chrome 開著，方便你手動登入或檢查
+- 一般 ingest run 在完成後會自動斷開 Playwright 連線，並關閉 automation Chrome，不需要手動 `Ctrl-C`
+
 若你想一次抓多篇：
 
 ```bash

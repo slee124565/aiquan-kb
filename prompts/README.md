@@ -66,6 +66,8 @@ frontmatter schema：
 
 建議入口：
 
+- [daily-online-check-ingest-compile.md](daily-online-check-ingest-compile.md)
+  日更全流程入口：先做最新文章線上檢查與必要 raw capture，再完成 compile 與 discussion
 - [daily-broadcast-ingest-and-discuss.md](daily-broadcast-ingest-and-discuss.md)
   日更模式主入口：收錄一篇新課文，並立刻用既有 KB 做 discussion-ready 回覆
 - [markdown-broadcast-ingest.md](markdown-broadcast-ingest.md)

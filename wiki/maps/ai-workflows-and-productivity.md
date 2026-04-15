@@ -45,6 +45,7 @@
 - [783](../broadcasts/783.md)
 - [802](../broadcasts/802.md)
 - [819](../broadcasts/819.md)
+- [821](../broadcasts/821.md)
 - [232](../broadcasts/232.md)
 - [725](../broadcasts/725.md)
 - [730](../broadcasts/730.md)
@@ -85,3 +86,4 @@
 
 - 課程中的工作流訊號，哪些適合抽成 role-based playbooks
 - 不同工作流應如何分層成個人、團隊與組織 adoption 三種骨架
+- 哪些專家型任務其實已經能先抽出「中間推理骨架」，再交給 AI 做分工協作

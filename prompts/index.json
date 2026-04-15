@@ -4,6 +4,44 @@
   "description": "Machine-readable registry of prompt assets for aiquan-kb human-agent collaboration.",
   "prompts": [
     {
+      "id": "daily-online-check-ingest-compile",
+      "path": "prompts/daily-online-check-ingest-compile.md",
+      "title": "Daily Online Check Ingest Compile",
+      "purpose": "run the full daily pipeline from latest online article check through raw capture compile and kb-aware discussion",
+      "use_when": [
+        "the user wants today's latest 快刀廣播站 article checked online before ingest",
+        "the source may not yet exist in raw sources",
+        "the user wants one end-to-end daily operator flow from capture to compile"
+      ],
+      "inputs": [
+        "optional source path url or broadcast id",
+        "optional reason this article matters today",
+        "optional current work context or question"
+      ],
+      "outputs": [
+        "candidate selection",
+        "capture verdict",
+        "compile verdict",
+        "core view",
+        "compare",
+        "extend",
+        "taste training note",
+        "writeback suggestions"
+      ],
+      "related_prompts": [
+        "daily-broadcast-ingest-and-discuss",
+        "markdown-broadcast-ingest",
+        "ingest-review"
+      ],
+      "tags": [
+        "daily",
+        "online-check",
+        "ingest",
+        "compile",
+        "orchestration"
+      ]
+    },
+    {
       "id": "daily-broadcast-ingest-and-discuss",
       "path": "prompts/daily-broadcast-ingest-and-discuss.md",
       "title": "Daily Broadcast Ingest And Discuss",

@@ -213,19 +213,50 @@ function launchChrome({ port, url, userDataDir }) {
     stdio: "ignore",
   });
   child.unref();
+  return child.pid;
 }
 
 async function ensureAutomationChrome({ port, url, userDataDir }) {
   try {
     await waitForJsonVersion(port, 1500);
-    return { launched: false };
+    return { launched: false, chromePid: null };
   } catch (_) {
-    launchChrome({ port, url, userDataDir });
+    const chromePid = launchChrome({ port, url, userDataDir });
     try {
       await waitForJsonVersion(port, 20000);
-      return { launched: true };
+      return { launched: true, chromePid };
     } catch (_) {
       throw new Error(buildDebugPortHelp(port, userDataDir));
+    }
+  }
+}
+
+async function shutdownLaunchedChrome(chromePid) {
+  if (!chromePid) return;
+
+  const signals = ["SIGTERM", "SIGKILL"];
+  for (const signal of signals) {
+    try {
+      process.kill(-chromePid, signal);
+    } catch (error) {
+      if (error && error.code === "ESRCH") return;
+      try {
+        process.kill(chromePid, signal);
+      } catch (innerError) {
+        if (innerError && innerError.code === "ESRCH") return;
+        throw innerError;
+      }
+    }
+
+    const startedAt = Date.now();
+    while (Date.now() - startedAt < 5000) {
+      try {
+        process.kill(chromePid, 0);
+        await sleep(200);
+      } catch (error) {
+        if (error && error.code === "ESRCH") return;
+        throw error;
+      }
     }
   }
 }
@@ -726,7 +757,7 @@ async function main() {
     console.log("bootstrap completed");
   }
 
-  const { launched } = await ensureAutomationChrome({
+  const { launched, chromePid } = await ensureAutomationChrome({
     port,
     url: startUrl,
     userDataDir: chromeUserDataDir,
@@ -743,68 +774,35 @@ async function main() {
     return;
   }
 
-  const browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`);
-  const context = browser.contexts()[0] || await browser.newContext();
-  const page = await findOrCreateTargetPage(context, startUrl);
-
-  await page.bringToFront();
-  if (normalizeUrlForMatch(page.url()) !== normalizeUrlForMatch(startUrl)) {
-    await page.goto(startUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
-  }
-
+  let browser;
   try {
-    await waitForArticleReady(page);
-  } catch (error) {
-    console.error(`page url on failure: ${page.url()}`);
-    await writeDebugArtifacts(page, "article-ready-timeout");
-    throw new Error(
-      [
-        error.message,
-        "若這是首次執行，請先用 --launch-only 啟動專用 Chrome profile，手動登入 Dedao，再重跑。",
-      ].join("\n")
-    );
-  }
+    browser = await chromium.connectOverCDP(`http://127.0.0.1:${port}`);
+    const context = browser.contexts()[0] || await browser.newContext();
+    const page = await findOrCreateTargetPage(context, startUrl);
 
-  let currentArticle = await extractArticle(page);
-  if (rememberedUrl && !forceUrl && !includeStart) {
+    await page.bringToFront();
+    if (normalizeUrlForMatch(page.url()) !== normalizeUrlForMatch(startUrl)) {
+      await page.goto(startUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
+    }
+
     try {
-      currentArticle = await advanceToDistinctNextArticle(page, currentArticle, "增量起點切換");
+      await waitForArticleReady(page);
     } catch (error) {
-      patchSessionState(state, sessionKey, {
-        chrome_user_data_dir: normalizePathForStorage(chromeUserDataDir),
-        last_checked_at: new Date().toISOString(),
-        last_run_status: "no-new-items",
-        last_run_new_count: 0,
-      });
-      saveState(state);
-      console.log(`no new items: ${error.message}`);
-      return;
+      console.error(`page url on failure: ${page.url()}`);
+      await writeDebugArtifacts(page, "article-ready-timeout");
+      throw new Error(
+        [
+          error.message,
+          "若這是首次執行，請先用 --launch-only 啟動專用 Chrome profile，手動登入 Dedao，再重跑。",
+        ].join("\n")
+      );
     }
-  }
 
-  let processedCount = 0;
-  const seenThisRun = new Set();
-
-  while (processedCount < count) {
-    const article = currentArticle;
-    const published = normalizePublishedDate(article.timeText || article.publishText);
-    const importedAt = todayIso();
-    const broadcastId = deriveBroadcastId({ ...article, published });
-    const year = (published || importedAt).slice(0, 4);
-    const sourceHash = hashContent(article.markdown);
-    const articlePageUrl = article.pageUrl || page.url();
-    const sourcePath = articlePageUrl || article.sourceUrl || page.url();
-    const { verdict } = determineRegistryVerdict({ broadcastId, published }, registry, sourceHash);
-    const runIdentity = article.sourceId || broadcastId || article.articleKey;
-
-    if (seenThisRun.has(runIdentity)) {
-      console.warn(`duplicate article in current run: ${broadcastId} ${article.title}`);
-      break;
-    }
-    seenThisRun.add(runIdentity);
-
-    if (verdict === "skip") {
-      if (processedCount === 0) {
+    let currentArticle = await extractArticle(page);
+    if (rememberedUrl && !forceUrl && !includeStart) {
+      try {
+        currentArticle = await advanceToDistinctNextArticle(page, currentArticle, "增量起點切換");
+      } catch (error) {
         patchSessionState(state, sessionKey, {
           chrome_user_data_dir: normalizePathForStorage(chromeUserDataDir),
           last_checked_at: new Date().toISOString(),
@@ -812,62 +810,115 @@ async function main() {
           last_run_new_count: 0,
         });
         saveState(state);
-        console.log(`no new items: already captured ${broadcastId}`);
+        console.log(`no new items: ${error.message}`);
         return;
       }
-
-      console.log(`reached existing article boundary: ${broadcastId}`);
-      break;
     }
 
-    const ingestStatus = verdict === "updated" ? "updated" : "captured";
-    const rawRelativePath = buildRawRelativePath(year, broadcastId);
-    const rawAbsolutePath = saveRawSource(article, {
-      broadcastId,
-      sourcePath,
-      sourceUrl: sourcePath,
-      published,
-      importedAt,
-      ingestStatus,
-      sourceHash,
-      year,
-    });
+    let processedCount = 0;
+    const seenThisRun = new Set();
 
-    upsertRegistryRow(registry, {
-      broadcast_id: broadcastId,
-      source_path: sourcePath,
-      raw_file: rawRelativePath,
-      broadcast_card: "",
-      year: String(year),
-      imported_at: importedAt,
-      source_hash: sourceHash,
-      status: ingestStatus,
-    });
-    writeRegistry(registry);
+    while (processedCount < count) {
+      const article = currentArticle;
+      const published = normalizePublishedDate(article.timeText || article.publishText);
+      const importedAt = todayIso();
+      const broadcastId = deriveBroadcastId({ ...article, published });
+      const year = (published || importedAt).slice(0, 4);
+      const sourceHash = hashContent(article.markdown);
+      const articlePageUrl = article.pageUrl || page.url();
+      const sourcePath = articlePageUrl || article.sourceUrl || page.url();
+      const { verdict } = determineRegistryVerdict({ broadcastId, published }, registry, sourceHash);
+      const runIdentity = article.sourceId || broadcastId || article.articleKey;
 
-    processedCount += 1;
-    patchSessionState(state, sessionKey, {
-      chrome_user_data_dir: normalizePathForStorage(chromeUserDataDir),
-      last_checked_at: new Date().toISOString(),
-      last_ingested_at: new Date().toISOString(),
-      last_ingested_broadcast_id: broadcastId,
-      last_ingested_url: sourcePath,
-      last_raw_file: rawRelativePath,
-      last_run_status: ingestStatus,
-      last_run_new_count: processedCount,
-    });
-    saveState(state);
+      if (seenThisRun.has(runIdentity)) {
+        console.warn(`duplicate article in current run: ${broadcastId} ${article.title}`);
+        break;
+      }
+      seenThisRun.add(runIdentity);
 
-    console.log(`[${processedCount}/${count}] ${ingestStatus}: ${rawAbsolutePath}`);
+      if (verdict === "skip") {
+        if (processedCount === 0) {
+          patchSessionState(state, sessionKey, {
+            chrome_user_data_dir: normalizePathForStorage(chromeUserDataDir),
+            last_checked_at: new Date().toISOString(),
+            last_run_status: "no-new-items",
+            last_run_new_count: 0,
+          });
+          saveState(state);
+          console.log(`no new items: already captured ${broadcastId}`);
+          return;
+        }
 
-    if (processedCount === count) break;
+        console.log(`reached existing article boundary: ${broadcastId}`);
+        break;
+      }
 
-    try {
-      await sleep(1200 + Math.floor(Math.random() * 1000));
-      currentArticle = await advanceToDistinctNextArticle(page, article, "下一篇切換");
-    } catch (error) {
-      console.log(`stop after ${processedCount} captured items: ${error.message}`);
-      break;
+      const ingestStatus = verdict === "updated" ? "updated" : "captured";
+      const rawRelativePath = buildRawRelativePath(year, broadcastId);
+      const rawAbsolutePath = saveRawSource(article, {
+        broadcastId,
+        sourcePath,
+        sourceUrl: sourcePath,
+        published,
+        importedAt,
+        ingestStatus,
+        sourceHash,
+        year,
+      });
+
+      upsertRegistryRow(registry, {
+        broadcast_id: broadcastId,
+        source_path: sourcePath,
+        raw_file: rawRelativePath,
+        broadcast_card: "",
+        year: String(year),
+        imported_at: importedAt,
+        source_hash: sourceHash,
+        status: ingestStatus,
+      });
+      writeRegistry(registry);
+
+      processedCount += 1;
+      patchSessionState(state, sessionKey, {
+        chrome_user_data_dir: normalizePathForStorage(chromeUserDataDir),
+        last_checked_at: new Date().toISOString(),
+        last_ingested_at: new Date().toISOString(),
+        last_ingested_broadcast_id: broadcastId,
+        last_ingested_url: sourcePath,
+        last_raw_file: rawRelativePath,
+        last_run_status: ingestStatus,
+        last_run_new_count: processedCount,
+      });
+      saveState(state);
+
+      console.log(`[${processedCount}/${count}] ${ingestStatus}: ${rawAbsolutePath}`);
+
+      if (processedCount === count) break;
+
+      try {
+        await sleep(1200 + Math.floor(Math.random() * 1000));
+        currentArticle = await advanceToDistinctNextArticle(page, article, "下一篇切換");
+      } catch (error) {
+        console.log(`stop after ${processedCount} captured items: ${error.message}`);
+        break;
+      }
+    }
+  } finally {
+    if (browser) {
+      try {
+        const browserSession = await browser.newBrowserCDPSession();
+        await browserSession.send("Browser.close");
+      } catch (_) {
+        // ignore CDP browser close errors during shutdown
+      }
+      try {
+        await browser.close();
+      } catch (_) {
+        // ignore browser disconnect errors during shutdown
+      }
+    }
+    if (launched) {
+      await shutdownLaunchedChrome(chromePid);
     }
   }
 }
