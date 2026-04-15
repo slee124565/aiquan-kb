@@ -25,3 +25,5 @@
 - 2026-04-14: batch compiled broadcasts 787,788,789,790,791,792,793,794,795,796,797,798,799,800,801,803,804,805,806,807,808,809,810,811,813,814 from `dedao/快刀廣播站`; created raw sources and broadcast cards, and wrote back learning-design, workplace-adoption, tool-evaluation, and tooling/adoption navigation
 - 2026-04-14: followed broadcast 818 to the next unprocessed article, captured 819, compiled it, and wrote back workplace-adoption, workflow, and learning-design updates
 - 2026-04-14: batch compiled broadcasts 232,723,724,725,726,727,728,729,730,731,732,733,734,735,736,816 from `dedao/快刀廣播站`; created raw sources and broadcast cards, and wrote back tooling/adoption navigation
+- 2026-04-15: captured and compiled broadcast 820 from `dedao/快刀廣播站`; added frontline workflow writeback to workplace-adoption and workflows pages
+- 2026-04-15: ran daily ingest check; no post-819 new article was found, and fixed registry/raw consistency for broadcasts 818 and 819
