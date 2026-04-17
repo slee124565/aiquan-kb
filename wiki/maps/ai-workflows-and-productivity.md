@@ -81,9 +81,11 @@
 - [699](../broadcasts/699.md)
 - [704](../broadcasts/704.md)
 - [820](../broadcasts/820.md)
+- [822](../broadcasts/822.md)
 
 ## Open Threads
 
 - 課程中的工作流訊號，哪些適合抽成 role-based playbooks
 - 不同工作流應如何分層成個人、團隊與組織 adoption 三種骨架
 - 哪些專家型任務其實已經能先抽出「中間推理骨架」，再交給 AI 做分工協作
+- 當入門級任務先被 AI 吃掉時，工作流與人才培養應如何重新設計

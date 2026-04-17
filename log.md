@@ -28,3 +28,4 @@
 - 2026-04-15: captured and compiled broadcast 820 from `dedao/快刀廣播站`; added frontline workflow writeback to workplace-adoption and workflows pages
 - 2026-04-15: ran daily ingest check; no post-819 new article was found, and fixed registry/raw consistency for broadcasts 818 and 819
 - 2026-04-16: ran daily ingest check after broadcast 821 capture; no newer article was found, then compiled 821 and wrote back expert-reasoning workflow signals to workplace-adoption and workflows pages
+- 2026-04-17: ran daily online check, captured and compiled broadcast 822, and wrote back yearly-observation, tool-evaluation, workplace-adoption, and tooling/workflow map updates

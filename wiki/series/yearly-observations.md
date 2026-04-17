@@ -104,19 +104,22 @@
 - [717](../broadcasts/717.md)
 - [721](../broadcasts/721.md)
 - [722](../broadcasts/722.md)
+- [822](../broadcasts/822.md)
 
 ## Recurring Patterns
 
 - 高層總結多
 - 適合回寫 theme、map 與課程定位頁
+- 年度報告型內容最有價值的地方，常不是結論本身，而是它迫使既有判準升級，例如把能力、adoption、成本與社會影響拆開看
 
 ## What Changed Over Time
 
-- 待補
+- 從早期偏向「AI 又更強了」的年度總結，逐步走向更成熟的結構判讀：同時看供給、使用、部署落差、人才結構與外部成本
 
 ## Open Threads
 
 - 年度觀察與單篇日更之間，哪些判斷是持續成立的
+- 哪些年度報告值得被抽成更明確的判準清單，而不是只留下單篇摘要
 
 ## Related Pages
 
