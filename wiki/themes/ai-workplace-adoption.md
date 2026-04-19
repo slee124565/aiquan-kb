@@ -117,6 +117,7 @@
 
 - [Turn A Broadcast Into Team Action](../playbooks/turn-a-broadcast-into-team-action.md)
 - [Redesign A Workflow With AI](../playbooks/redesign-a-workflow-with-ai.md)
+- [把內部 AI 落地經驗產品化](../playbooks/turn-internal-ai-adoption-into-external-service.md)
 
 ## Related Series
 

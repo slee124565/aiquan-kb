@@ -19,6 +19,7 @@
 - [Build An AI-Assisted Knowledge Base](wiki/playbooks/build-an-ai-assisted-knowledge-base.md)
 - [Evaluate A New AI Tool](wiki/playbooks/evaluate-a-new-ai-tool.md)
 - [Redesign A Workflow With AI](wiki/playbooks/redesign-a-workflow-with-ai.md)
+- [把內部 AI 落地經驗產品化](wiki/playbooks/turn-internal-ai-adoption-into-external-service.md)
 - [Start AI Coding From A Real Task](wiki/playbooks/start-ai-coding-from-a-real-task.md)
 - [Turn A Broadcast Into Team Action](wiki/playbooks/turn-a-broadcast-into-team-action.md)
 
