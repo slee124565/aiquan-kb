@@ -37,8 +37,15 @@ tags:
 - 哪些值得 merge 到 theme / playbook / series
 - 哪些其實可以合併或不必保留太厚
 
+引用任何單篇或高層頁面時，不要只寫 id 或頁名。
+- 若是 broadcast，至少寫成：`id｜原標題`
+- 並補 1 句說明它原本在講什麼
+- 若是 theme / playbook / series / map，補 1 句說明它原本承接什麼問題
+
 最後請給我：
 1. 今日這批課文的總體增量
 2. 最值得更新的 theme / playbook / series
 3. 接下來 1 到 3 個最有價值的維護動作
+
+若列出多個引用項目，請在文末補 `Referenced Items` 區塊。
 ```

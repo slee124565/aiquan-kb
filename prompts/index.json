@@ -2,6 +2,16 @@
   "version": 1,
   "generated_manually": true,
   "description": "Machine-readable registry of prompt assets for aiquan-kb human-agent collaboration.",
+  "citation_policy": {
+    "human_readable_citation": true,
+    "broadcast_minimum_format": "id｜原標題",
+    "broadcast_expanded_fields": [
+      "what_it_was_about_one_sentence",
+      "why_it_is_referenced_one_sentence"
+    ],
+    "non_broadcast_requirement": "theme / playbook / series / map references should include one sentence describing what problem the page carries",
+    "referenced_items_section_when_needed": true
+  },
   "prompts": [
     {
       "id": "daily-online-check-ingest-compile",
@@ -26,8 +36,10 @@
         "compare",
         "extend",
         "taste training note",
-        "writeback suggestions"
+        "writeback suggestions",
+        "referenced items"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "daily-broadcast-ingest-and-discuss",
         "markdown-broadcast-ingest",
@@ -62,8 +74,10 @@
         "compare",
         "extend",
         "taste training note",
-        "suggested writeback targets"
+        "suggested writeback targets",
+        "referenced items"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "markdown-broadcast-ingest",
         "theme-update",
@@ -96,8 +110,10 @@
         "ingest verdict",
         "canonical naming recommendation",
         "raw and broadcast action",
-        "related theme playbook and series targets"
+        "related theme playbook and series targets",
+        "referenced items when needed"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "compare-broadcast-to-existing",
         "theme-update",
@@ -124,8 +140,10 @@
       "outputs": [
         "daily ingest synthesis review",
         "broadcast verdicts",
-        "theme playbook and series update suggestions"
+        "theme playbook and series update suggestions",
+        "referenced items when needed"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "theme-update",
         "playbook-extraction",
@@ -152,8 +170,10 @@
       "outputs": [
         "difference analysis",
         "recommended write target",
-        "duplicate versus net-new judgment"
+        "duplicate versus net-new judgment",
+        "referenced items when needed"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "markdown-broadcast-ingest",
         "theme-update",
@@ -182,8 +202,10 @@
         "topic state before",
         "theme updates",
         "playbook or map update suggestions",
-        "open threads"
+        "open threads",
+        "referenced items when needed"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "compare-broadcast-to-existing",
         "playbook-extraction",
@@ -212,8 +234,10 @@
       "outputs": [
         "extracted method",
         "proposed playbook structure",
-        "reuse boundaries"
+        "reuse boundaries",
+        "human-readable backlinked references"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "markdown-broadcast-ingest",
         "theme-update",
@@ -242,8 +266,10 @@
         "series summary",
         "recurring patterns",
         "strongest representative broadcasts",
-        "suggested theme and playbook updates"
+        "suggested theme and playbook updates",
+        "referenced items when needed"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "compare-broadcast-to-existing",
         "theme-update",
@@ -275,8 +301,10 @@
       "outputs": [
         "structure issues",
         "cleanup suggestions",
-        "top next actions"
+        "top next actions",
+        "human-readable cited pages"
       ],
+      "human_readable_citation": true,
       "related_prompts": [
         "theme-update",
         "playbook-extraction",

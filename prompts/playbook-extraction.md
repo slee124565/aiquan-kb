@@ -43,4 +43,8 @@ tags:
 2. 3 到 7 個步驟
 3. 需要回鏈的 broadcasts / themes / maps
 4. 哪些部分其實只是案例，不應寫進 playbook
+
+引用回鏈項目時，不要只寫 id 或頁名。
+- 若是 broadcast，至少寫成：`id｜原標題｜1句原內容摘要`
+- 若是 theme / map，補 1 句說明它原本承接什麼問題
 ```

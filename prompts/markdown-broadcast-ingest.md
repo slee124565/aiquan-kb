@@ -45,6 +45,9 @@ tags:
 - 判斷它的 `broadcast_id`
 - 建議 canonical filename
 - 檢查 repo 裡是否已有高度重複的 broadcast、theme、playbook 或 series
+  - 引用任何既有內容時，不要只寫 id 或頁名
+  - 若是 broadcast，至少輸出：`id｜原標題｜1句原內容摘要`
+  - 若是 theme / playbook / series / map，補 1 句說明它原本承接什麼問題
 
 如果值得保留，請：
 - 保存 source 與最小 provenance
@@ -56,4 +59,6 @@ tags:
 1. 這篇的新增價值
 2. 它與既有知識庫的關係
 3. 是否值得升級成 theme / playbook / series 層的更新
+
+若文中引用超過 2 個既有項目，請在文末補一個 `Referenced Items` 區塊，集中解碼所有關鍵引用。
 ```

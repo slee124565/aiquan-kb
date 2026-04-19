@@ -40,6 +40,16 @@ tags:
 - 若任務重點是方法萃取，優先用 playbook 類 prompt
 - 若任務重點是系列回顧，優先用 series 類 prompt
 
+human-readable citation rule：
+
+- repo 內引用不要只寫 `broadcast_id`
+- 若引用 broadcast，至少輸出 `id｜原標題`
+- 若該引用對推論重要，再補：
+  - 它原本在講什麼（1 句）
+  - 這次為什麼要引用它（1 句）
+- 若引用的是 theme / playbook / series / map，也要補 1 句說明該頁原本承接什麼問題
+- 若正文為了可讀性只能短引，應在文末補一個 `Referenced Items` 區塊，集中解碼所有關鍵引用
+
 frontmatter schema：
 
 - `id`

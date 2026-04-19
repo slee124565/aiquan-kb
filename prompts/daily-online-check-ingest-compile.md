@@ -93,6 +93,12 @@ tags:
      它和 repo 裡哪些 theme / playbook / series / map / 舊 broadcast 最相關
      它是 net-new、revision pressure、series continuation，還是弱訊號
      它修正了我原本哪個判準
+     引用任何既有內容時，不要只寫 id 或頁名。
+     - 若是 broadcast，至少寫成：`id｜原標題`
+     - 若該引用對理解重要，再補：
+       - 它原本在講什麼（1 句）
+       - 這次新文章和它的關係（1 句）
+     - 若是 theme / playbook / series / map，也補 1 句說明該頁原本承接什麼問題
 
    - Extend
      如果這篇成立，接下來最值得追問的問題
@@ -131,6 +137,11 @@ tags:
    - Taste Training Note
    - Writeback Suggestion
 
+6. Referenced Items
+   - 把正文中引用到的關鍵 broadcast / theme / playbook / series / map 做人類可讀解碼
+   - 若是 broadcast，格式為：`id｜標題`：它原本在講什麼（1 句）
+   - 若是 theme / playbook / series / map，格式為：`頁面名`：它原本承接什麼問題（1 句）
+
 5. Risks / Manual Review
    - 哪些地方不確定
    - 哪些地方需要我手動確認
@@ -146,6 +157,7 @@ tags:
 - Extend
 - Taste training note
 - Writeback suggestions
+- Referenced items
 - Risks or manual review notes
 
 ## Notes

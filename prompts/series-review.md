@@ -41,4 +41,11 @@ tags:
 - 哪幾篇是代表作
 - 哪些內容值得提升成 theme 或 playbook
 - 目前 series page 還缺什麼
+
+引用代表性 broadcasts 時，不要只寫 id。
+- 至少寫成：`id｜原標題`
+- 並補 1 句說明它原本在講什麼
+- 若引用 theme / playbook，也補 1 句說明該頁原本承接什麼問題
+
+若正文列出多篇代表作，請在文末補 `Referenced Items` 區塊集中解碼。
 ```

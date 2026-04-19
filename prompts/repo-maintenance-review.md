@@ -47,4 +47,9 @@ tags:
 1. 結構問題排序
 2. 最值得做的 1 到 3 個 cleanup / merge 動作
 3. 若只做一件事，應先做哪一件
+
+引用問題頁面或代表性 broadcasts 時，不要只寫 id 或頁名。
+- 若是 broadcast，至少寫成：`id｜原標題`
+- 並補 1 句說明它原本在講什麼
+- 若是 theme / playbook / series / map，補 1 句說明它原本承接什麼問題
 ```

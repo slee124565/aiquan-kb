@@ -31,6 +31,13 @@ tags:
 ```md
 請比較這篇新課文與 repo 內最接近的 broadcast / theme / playbook / series。
 
+引用任何既有內容時，不要只寫 id 或頁名。
+- 若是 broadcast，至少寫成：`id｜原標題`
+- 每個最接近項目都補：
+  - 它原本在講什麼（1 句）
+  - 它和新課文差在哪裡（1 句）
+- 若是 theme / playbook / series，也補 1 句說明該頁原本承接什麼問題
+
 我想知道：
 - 它是重複、補強，還是真正新增
 - 應該更新哪一層，而不是新增一個近似頁
@@ -41,4 +48,6 @@ tags:
 - net-new
 - revision pressure
 - series continuation
+
+若正文引用了多個項目，請在文末補一個 `Referenced Items` 區塊做集中解碼。
 ```

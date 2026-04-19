@@ -29,3 +29,5 @@
 - 2026-04-15: ran daily ingest check; no post-819 new article was found, and fixed registry/raw consistency for broadcasts 818 and 819
 - 2026-04-16: ran daily ingest check after broadcast 821 capture; no newer article was found, then compiled 821 and wrote back expert-reasoning workflow signals to workplace-adoption and workflows pages
 - 2026-04-17: ran daily online check, captured and compiled broadcast 822, and wrote back yearly-observation, tool-evaluation, workplace-adoption, and tooling/workflow map updates
+- 2026-04-18: ran daily online check, captured and compiled broadcast 823, and wrote back adoption-role signals to workplace-adoption, workflow redesign, and tooling/adoption navigation
+- 2026-04-18: continued daily online check to the next newest article, captured and compiled broadcast 824, and wrote back learning-compounding signals to learning-design, learning/education navigation, and weekend-recommendation series
