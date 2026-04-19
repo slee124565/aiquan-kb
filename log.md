@@ -31,3 +31,4 @@
 - 2026-04-17: ran daily online check, captured and compiled broadcast 822, and wrote back yearly-observation, tool-evaluation, workplace-adoption, and tooling/workflow map updates
 - 2026-04-18: ran daily online check, captured and compiled broadcast 823, and wrote back adoption-role signals to workplace-adoption, workflow redesign, and tooling/adoption navigation
 - 2026-04-18: continued daily online check to the next newest article, captured and compiled broadcast 824, and wrote back learning-compounding signals to learning-design, learning/education navigation, and weekend-recommendation series
+- 2026-04-20: ran daily online check, captured and compiled broadcast 825, and wrote back workplace-adoption and workflow playbook/map signals for vertical AI in supply-chain operations
