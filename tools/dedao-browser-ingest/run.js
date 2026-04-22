@@ -31,6 +31,7 @@ const REGISTRY_HEADERS = [
   "source_hash",
   "status",
 ];
+const SUCCESSFUL_REGISTRY_STATUSES = new Set(["captured", "updated", "imported", "compiled"]);
 
 function parseArgs(argv) {
   const args = {};
@@ -94,8 +95,15 @@ function timestampSlug() {
   return `${yyyy}${mm}${dd}-${hh}${min}${sec}`;
 }
 
-function todayIso() {
-  return new Date().toISOString().slice(0, 10);
+function localDateToIso(date) {
+  const yyyy = String(date.getFullYear());
+  const mm = String(date.getMonth() + 1).padStart(2, "0");
+  const dd = String(date.getDate()).padStart(2, "0");
+  return `${yyyy}-${mm}-${dd}`;
+}
+
+function todayIso(date = new Date()) {
+  return localDateToIso(date);
 }
 
 function normalizePathForStorage(filePath) {
@@ -342,18 +350,24 @@ function patchSessionState(state, sessionKey, patch) {
   };
 }
 
-function findLatestSuccessfulArticleUrl(registry) {
+function findLatestSuccessfulRegistryRow(registry) {
   const urlRows = registry.rows
     .filter((row) => /^https?:\/\//.test(row.source_path || ""))
-    .filter((row) => row.status === "captured" || row.status === "updated")
+    .filter((row) => SUCCESSFUL_REGISTRY_STATUSES.has(String(row.status || "")))
     .slice()
     .sort((a, b) => {
-      const dateCompare = String(a.imported_at || "").localeCompare(String(b.imported_at || ""));
-      if (dateCompare !== 0) return dateCompare;
-      return String(a.broadcast_id || "").localeCompare(String(b.broadcast_id || ""), undefined, { numeric: true });
+      const idCompare = String(a.broadcast_id || "").localeCompare(String(b.broadcast_id || ""), undefined, {
+        numeric: true,
+      });
+      if (idCompare !== 0) return idCompare;
+      return String(a.imported_at || "").localeCompare(String(b.imported_at || ""));
     });
 
-  return urlRows.length ? urlRows[urlRows.length - 1].source_path : "";
+  return urlRows.length ? urlRows[urlRows.length - 1] : null;
+}
+
+function findLatestSuccessfulArticleUrl(registry) {
+  return findLatestSuccessfulRegistryRow(registry)?.source_path || "";
 }
 
 function normalizePublishedDate(text, referenceDate = new Date()) {
@@ -364,17 +378,17 @@ function normalizePublishedDate(text, referenceDate = new Date()) {
     return `${yyyy}-${String(mm).padStart(2, "0")}-${String(dd).padStart(2, "0")}`;
   }
   if (value === "今天") {
-    return referenceDate.toISOString().slice(0, 10);
+    return localDateToIso(referenceDate);
   }
   if (value === "昨天") {
     const date = new Date(referenceDate);
     date.setDate(date.getDate() - 1);
-    return date.toISOString().slice(0, 10);
+    return localDateToIso(date);
   }
   if (value === "前天") {
     const date = new Date(referenceDate);
     date.setDate(date.getDate() - 2);
-    return date.toISOString().slice(0, 10);
+    return localDateToIso(date);
   }
   return "";
 }
@@ -726,7 +740,7 @@ async function main() {
   const sessionState = getSessionState(state, sessionKey);
   const registry = loadRegistry();
   const latestRegistryUrl = findLatestSuccessfulArticleUrl(registry);
-  const rememberedUrl = sessionState.last_ingested_url || latestRegistryUrl;
+  const rememberedUrl = latestRegistryUrl || sessionState.last_ingested_url || "";
   const startUrl = forceUrl ? seedUrl : (rememberedUrl || seedUrl);
 
   console.log(`session key: ${sessionKey}`);
@@ -803,9 +817,16 @@ async function main() {
       try {
         currentArticle = await advanceToDistinctNextArticle(page, currentArticle, "增量起點切換");
       } catch (error) {
+        const boundaryPublished = normalizePublishedDate(currentArticle.timeText || currentArticle.publishText);
+        const boundaryBroadcastId = deriveBroadcastId({ ...currentArticle, published: boundaryPublished });
+        const boundarySourcePath = currentArticle.pageUrl || currentArticle.sourceUrl || page.url() || rememberedUrl || "";
+        const boundaryExisting = registry.byBroadcastId.get(boundaryBroadcastId);
         patchSessionState(state, sessionKey, {
           chrome_user_data_dir: normalizePathForStorage(chromeUserDataDir),
           last_checked_at: new Date().toISOString(),
+          last_ingested_broadcast_id: boundaryBroadcastId,
+          last_ingested_url: boundaryExisting?.source_path || boundarySourcePath,
+          last_raw_file: boundaryExisting?.raw_file || sessionState.last_raw_file || "",
           last_run_status: "no-new-items",
           last_run_new_count: 0,
         });
@@ -838,9 +859,13 @@ async function main() {
 
       if (verdict === "skip") {
         if (processedCount === 0) {
+          const existing = registry.byBroadcastId.get(broadcastId);
           patchSessionState(state, sessionKey, {
             chrome_user_data_dir: normalizePathForStorage(chromeUserDataDir),
             last_checked_at: new Date().toISOString(),
+            last_ingested_broadcast_id: broadcastId,
+            last_ingested_url: existing?.source_path || sourcePath,
+            last_raw_file: existing?.raw_file || sessionState.last_raw_file || "",
             last_run_status: "no-new-items",
             last_run_new_count: 0,
           });

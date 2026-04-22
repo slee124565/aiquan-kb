@@ -33,3 +33,5 @@
 - 2026-04-18: continued daily online check to the next newest article, captured and compiled broadcast 824, and wrote back learning-compounding signals to learning-design, learning/education navigation, and weekend-recommendation series
 - 2026-04-20: ran daily online check, captured and compiled broadcast 825, and wrote back workplace-adoption and workflow playbook/map signals for vertical AI in supply-chain operations
 - 2026-04-20: extracted a new playbook from broadcasts 694, 823, and 825 for turning validated internal AI adoption into external service capability
+- 2026-04-21: ran daily online check, captured and compiled broadcast 826, and wrote back human-AI decision-boundary signals to workplace-adoption and workflow redesign/map pages
+- 2026-04-22: compiled broadcast 827, and wrote back AI-learning-design / learning-and-education signals around assessment redesign, oral defense, and preserving student-owned reasoning in AI-era classrooms

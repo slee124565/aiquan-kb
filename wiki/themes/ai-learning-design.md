@@ -18,6 +18,7 @@
 - 好的學習與探索環境不只提供正確答案，也要保留多樣候選與可見過程，幫助使用者延長探索
 - 面向受限人群或高摩擦場景時，教學與產品設計都要從真實限制出發，而不是從理想能力出發
 - 若新人過早把基礎動作交給 AI，學習路徑可能被截斷，設計教學時要保留練習與判斷的機會
+- 當 AI 足以代寫高完成度作業時，教學設計不能只優化輸出品質，還要重設 assessment，讓學生能在追問、答辯與現場推理裡證明自己真的理解
 - 高品質訪談、案例庫與知識庫若能被 AI 助手讀取，會從被動材料變成可持續回放與校正判準的學習資產
 
 ## Representative Broadcasts
@@ -91,6 +92,7 @@
 - [801](../broadcasts/801.md)
 - [806](../broadcasts/806.md)
 - [824](../broadcasts/824.md)
+- [827](../broadcasts/827.md)
 - [734](../broadcasts/734.md)
 - [735](../broadcasts/735.md)
 - [736](../broadcasts/736.md)
@@ -112,6 +114,7 @@
 - 哪些課文真正能支撐 beginner-to-practitioner 的路徑
 - 哪些共學設計值得萃取成獨立 playbook
 - repo 是否該把「AI 學習的自举效应」整理成更清楚的能力升級方法
+- 哪些教育案例已足以把 assessment redesign 從一般 learning-design 討論裡獨立出來
 
 ## Related Pages
 

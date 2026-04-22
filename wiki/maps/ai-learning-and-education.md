@@ -2,7 +2,7 @@
 
 ## Scope
 
-這個 map 聚焦 AI 學習設計、共學、課程結構與教育場景。
+這個 map 聚焦 AI 學習設計、共學、課程結構、評估方式與教育場景。
 
 ## Entry Points
 
@@ -93,9 +93,11 @@
 - [801](../broadcasts/801.md)
 - [806](../broadcasts/806.md)
 - [824](../broadcasts/824.md)
+- [827](../broadcasts/827.md)
 
 ## Open Threads
 
 - 哪些課文真正能支撐角色化、場景化的學習升級路徑
 - AI 編程與 role-based workflow 教學，是否應在此 map 下分出更細入口
 - 哪些內容足以把「學習自举效应」從零散觀察提升成穩定入口
+- 哪些案例足以把 AI 時代的 assessment redesign 變成教育線的穩定子主題
