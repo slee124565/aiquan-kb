@@ -36,3 +36,4 @@
 - 2026-04-21: ran daily online check, captured and compiled broadcast 826, and wrote back human-AI decision-boundary signals to workplace-adoption and workflow redesign/map pages
 - 2026-04-22: compiled broadcast 827, and wrote back AI-learning-design / learning-and-education signals around assessment redesign, oral defense, and preserving student-owned reasoning in AI-era classrooms
 - 2026-04-23: compiled broadcast 828, and wrote back tool-evaluation / tooling-adoption signals around separating AI rebranding hype, market reaction, and real deployment substance
+- 2026-04-24: compiled broadcast 829, and wrote back tool-evaluation, workplace-adoption, and workflow/map signals around multimodal creation tools shifting from prompt-heavy execution to briefing-plus-QA workflow redesign
