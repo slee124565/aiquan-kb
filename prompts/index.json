@@ -250,6 +250,43 @@
       ]
     },
     {
+      "id": "ppt-visual-briefing",
+      "path": "prompts/ppt-visual-briefing.md",
+      "title": "PPT Visual Briefing",
+      "purpose": "turn recurring presentation-visual tasks into reusable briefs for ChatGPT Images or similar multimodal image tools",
+      "use_when": [
+        "you need a cover visual for a presentation",
+        "you need an infographic-style slide visual or concept diagram",
+        "you need a consistent set of presentation visuals across multiple slides",
+        "you want a reliable starting prompt instead of briefing from scratch"
+      ],
+      "inputs": [
+        "slide purpose",
+        "target audience",
+        "aspect ratio or slide format",
+        "preferred style and brand constraints",
+        "optional source text images or reference slides"
+      ],
+      "outputs": [
+        "first-round visual brief",
+        "revision instructions",
+        "reusable prompt skeletons for future slides"
+      ],
+      "human_readable_citation": true,
+      "related_prompts": [
+        "playbook-extraction",
+        "theme-update",
+        "repo-maintenance-review"
+      ],
+      "tags": [
+        "prompts",
+        "ppt",
+        "visual",
+        "workflow",
+        "multimodal"
+      ]
+    },
+    {
       "id": "series-review",
       "path": "prompts/series-review.md",
       "title": "Series Review",

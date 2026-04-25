@@ -16,6 +16,7 @@
 
 - [Turn A Broadcast Into Team Action](../playbooks/turn-a-broadcast-into-team-action.md)
 - [Redesign A Workflow With AI](../playbooks/redesign-a-workflow-with-ai.md)
+- [Make Presentation Visuals With ChatGPT Images](../playbooks/make-presentation-visuals-with-chatgpt-images.md)
 - [把內部 AI 落地經驗產品化](../playbooks/turn-internal-ai-adoption-into-external-service.md)
 - [Start AI Coding From A Real Task](../playbooks/start-ai-coding-from-a-real-task.md)
 

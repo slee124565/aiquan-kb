@@ -18,6 +18,7 @@
 
 - [Build An AI-Assisted Knowledge Base](wiki/playbooks/build-an-ai-assisted-knowledge-base.md)
 - [Evaluate A New AI Tool](wiki/playbooks/evaluate-a-new-ai-tool.md)
+- [Make Presentation Visuals With ChatGPT Images](wiki/playbooks/make-presentation-visuals-with-chatgpt-images.md)
 - [Redesign A Workflow With AI](wiki/playbooks/redesign-a-workflow-with-ai.md)
 - [把內部 AI 落地經驗產品化](wiki/playbooks/turn-internal-ai-adoption-into-external-service.md)
 - [Start AI Coding From A Real Task](wiki/playbooks/start-ai-coding-from-a-real-task.md)
@@ -47,6 +48,7 @@
 
 - [Prompt Assets](prompts/README.md)
 - [Prompt Registry](prompts/index.json)
+- [PPT Visual Briefing](prompts/ppt-visual-briefing.md)
 - `tools/list-prompts`
 - [Dedao Browser Ingest](tools/dedao-browser-ingest/README.md)
 

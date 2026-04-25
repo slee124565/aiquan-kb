@@ -90,6 +90,8 @@ frontmatter schema：
   以某個主題為中心更新 theme / map
 - [playbook-extraction.md](playbook-extraction.md)
   專門萃取可重用做法
+- [ppt-visual-briefing.md](ppt-visual-briefing.md)
+  把簡報視覺製作任務外部化成可重用的起手式 brief
 - [series-review.md](series-review.md)
   回顧某個欄目的累積脈絡
 - [repo-maintenance-review.md](repo-maintenance-review.md)
