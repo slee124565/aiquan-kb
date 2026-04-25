@@ -39,3 +39,4 @@
 - 2026-04-24: compiled broadcast 829, and wrote back tool-evaluation, workplace-adoption, and workflow/map signals around multimodal creation tools shifting from prompt-heavy execution to briefing-plus-QA workflow redesign
 - 2026-04-24: added a `PPT` visual-production playbook plus a reusable `ppt-visual-briefing` prompt asset, and linked them into workflow navigation for future writeback and reuse
 - 2026-04-25: compiled broadcast 830 from daily capture, and wrote back DeepSeek-V4 model-release signals to tool-evaluation, coding-onboarding, DeepSeek/open-source series, and tooling/adoption navigation
+- 2026-04-26: compiled broadcast 831 from daily capture, added AI risk/governance theme and map, and wrote back yearly-observation, tool-evaluation, workplace-adoption, and workflow signals

@@ -6,6 +6,7 @@
 - [AI Tooling And Adoption](wiki/maps/ai-tooling-and-adoption.md)
 - [AI Learning And Education](wiki/maps/ai-learning-and-education.md)
 - [AI Workflows And Productivity](wiki/maps/ai-workflows-and-productivity.md)
+- [AI Risk And Governance](wiki/maps/ai-risk-and-governance.md)
 
 ## Core Themes
 
@@ -13,6 +14,7 @@
 - [AI Tool Evaluation](wiki/themes/ai-tool-evaluation.md)
 - [AI Workplace Adoption](wiki/themes/ai-workplace-adoption.md)
 - [AI Learning Design](wiki/themes/ai-learning-design.md)
+- [AI Risk And Governance](wiki/themes/ai-risk-and-governance.md)
 
 ## Core Playbooks
 

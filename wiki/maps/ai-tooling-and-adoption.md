@@ -9,12 +9,14 @@
 - [AI Tool Evaluation](../themes/ai-tool-evaluation.md)
 - [AI Workplace Adoption](../themes/ai-workplace-adoption.md)
 - [AI Knowledge Management](../themes/ai-knowledge-management.md)
+- [AI Risk And Governance](../themes/ai-risk-and-governance.md)
 
 ## Core Themes
 
 - ai tool evaluation
 - ai workplace adoption
 - ai knowledge management
+- ai risk and governance
 
 ## Key Playbooks
 
@@ -174,6 +176,7 @@
 - [828](../broadcasts/828.md)
 - [829](../broadcasts/829.md)
 - [830](../broadcasts/830.md)
+- [831](../broadcasts/831.md)
 
 ## Open Threads
 
@@ -185,3 +188,4 @@
 - 我們該如何把 AI 品牌敘事、資本市場反應與真實部署能力分開記錄，而不把它們混成 adoption 證據
 - 什麼時候應停止把問題理解成「提示詞優化」，改判為「briefing、審稿與交付流程需要重設」
 - 如何判讀大模型發布：哪些訊號只是官方榜單，哪些訊號已經改變基礎設施路線、長上下文使用方式、coding workflow 與 API 成本結構
+- 工具能力越逼真、越自動化時，哪些風險應該在選型階段就納入，而不是等出事後才補治理

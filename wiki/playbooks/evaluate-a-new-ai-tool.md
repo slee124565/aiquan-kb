@@ -24,6 +24,7 @@
 10. 若它主要賣點是改名、熱詞綁定或市場情緒，而不是已可驗證的產品與交付能力，先把品牌敘事和真實能力拆開，再決定要不要投入時間
 11. 若它是多模態創作工具，不要只測單張好不好看；直接拿真實文稿、PDF、照片或 brief 測它能否理解內容、自己補版式、正確渲染文字，並維持跨多個輸出的一致性
 12. 若它是新發布的大模型，不要只看官方榜單；用真實長文、AI coding、agent 工具替換與 API 成本測試，把基礎設施路線、開源可用性、穩定性和第三方實測一起納入判斷
+13. 若它會生成或改寫圖片、聲音、影片、身份資訊、金融/健康建議或高風險內容，把濫用、深偽、詐騙、隱私和責任鏈納入評估；不要只因輸出更逼真或更自動化就判定值得採用
 
 ## Signals From Broadcasts
 
@@ -78,6 +79,7 @@
 - [828](../broadcasts/828.md)
 - [829](../broadcasts/829.md)
 - [830](../broadcasts/830.md)
+- [831](../broadcasts/831.md)
 
 ## Boundaries
 
@@ -88,3 +90,4 @@
 
 - [AI Tool Evaluation](../themes/ai-tool-evaluation.md)
 - [AI Tooling And Adoption](../maps/ai-tooling-and-adoption.md)
+- [AI Risk And Governance](../themes/ai-risk-and-governance.md)

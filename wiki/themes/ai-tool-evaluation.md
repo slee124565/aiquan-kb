@@ -24,6 +24,7 @@
 - 公司或產品改名、貼上熱門 AI 標籤、甚至得到短期市場追捧，都不等於它已具備相應能力；品牌敘事、資本市場反應與真實部署條件必須拆開驗證
 - 對多模態創作工具來說，評估不該停在單張成品或榜單分數，還要問它是否能少靠提示詞 micromanage，就讀懂素材、補足結構、完成可審核的整套交付
 - 評估大模型發布時，不能只看官方 benchmark；還要同步檢查底層基建路線、長上下文與 coding / agent 能力、API 成本、開源可用性，以及後續第三方實測是否支持官方敘事
+- 當工具會生成或放大高可信度媒介時，評估不能只看能力，也要看濫用門檻、驗證流程、弱勢群體傷害、平台規則與責任鏈
 
 ## Representative Broadcasts
 
@@ -129,6 +130,7 @@
 - [828](../broadcasts/828.md)
 - [829](../broadcasts/829.md)
 - [830](../broadcasts/830.md)
+- [831](../broadcasts/831.md)
 - [775](../broadcasts/775.md)
 - [776](../broadcasts/776.md)
 
@@ -150,3 +152,4 @@
 
 - [AI Tooling And Adoption](../maps/ai-tooling-and-adoption.md)
 - [AI Knowledge Management](../maps/ai-knowledge-management.md)
+- [AI Risk And Governance](../maps/ai-risk-and-governance.md)
