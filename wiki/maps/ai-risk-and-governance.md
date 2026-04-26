@@ -36,6 +36,7 @@
 - [805](../broadcasts/805.md)
 - [811](../broadcasts/811.md)
 - [831](../broadcasts/831.md)
+- [832](../broadcasts/832.md)
 
 ## Open Threads
 
@@ -43,3 +44,4 @@
 - 組織如何把付款、授權、內容發布、學術審查與高風險決策改成可追溯流程
 - 平台禁令、法律追責與社會反彈會如何改變 AI adoption 的成本結構
 - 哪些風險是工具評估時必須提前測的，哪些更適合在 team action 或 workflow redesign 階段治理
+- 面對 GEO、學術引用與專業格式包裝的假資訊，如何把 AI 回答重新接回可核驗來源
