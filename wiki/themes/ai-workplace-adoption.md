@@ -33,6 +33,7 @@
 - 當多模態工具已能讀懂素材、補結構、維持跨圖一致性並直接交付成套內容時，adoption 的瓶頸往往會從操作技巧，轉成 briefing 品質、審稿標準與流程重畫能力
 - 多智能體協作會把白領工作從單人端到端執行推向分工協作流程；真正的 adoption 成熟度取決於任務拆分、agent 間交接、人工審查和責任歸屬是否同步重畫
 - 當 AI 應用引發詐騙、深度偽造、社會反彈或高風險問責問題時，治理成本本身就是 adoption 成本，不能把它放在效率測算之外
+- 當 AI 進入物理世界，adoption 不再只是軟體流程接入；還要同時評估感測延遲、硬體可靠性、閉環控制、sim-to-real 落差、安全護欄、現場維護與事故責任鏈
 
 ## Representative Broadcasts
 
@@ -119,6 +120,7 @@
 - [826](../broadcasts/826.md)
 - [829](../broadcasts/829.md)
 - [831](../broadcasts/831.md)
+- [833](../broadcasts/833.md)
 
 ## Related Playbooks
 
@@ -135,7 +137,9 @@
 - 哪些欄目最常提供 adoption 級訊號
 - 哪些案例已足夠抽成角色導向 playbook
 - 哪些 broadcast 已足以支撐一條更清楚的「AI 翻譯層角色」方法線
+- 哪些物理 AI 場景已經跨過 demo 門檻，足以進入產線、醫療、交通或服務業工作流重畫？
 
 ## Related Pages
 
 - [AI Workflows And Productivity](../maps/ai-workflows-and-productivity.md)
+- [Physical AI And Robotics](physical-ai-and-robotics.md)

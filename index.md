@@ -15,6 +15,7 @@
 - [AI Workplace Adoption](wiki/themes/ai-workplace-adoption.md)
 - [AI Learning Design](wiki/themes/ai-learning-design.md)
 - [AI Risk And Governance](wiki/themes/ai-risk-and-governance.md)
+- [Physical AI And Robotics](wiki/themes/physical-ai-and-robotics.md)
 
 ## Core Playbooks
 
@@ -45,6 +46,7 @@
 - [783](wiki/broadcasts/783.md)
 - [812](wiki/broadcasts/812.md)
 - [786](wiki/broadcasts/786.md)
+- [833](wiki/broadcasts/833.md)
 
 ## Working Assets
 

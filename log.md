@@ -41,3 +41,4 @@
 - 2026-04-25: compiled broadcast 830 from daily capture, and wrote back DeepSeek-V4 model-release signals to tool-evaluation, coding-onboarding, DeepSeek/open-source series, and tooling/adoption navigation
 - 2026-04-26: compiled broadcast 831 from daily capture, added AI risk/governance theme and map, and wrote back yearly-observation, tool-evaluation, workplace-adoption, and workflow signals
 - 2026-04-27: compiled broadcast 832 from daily capture, and wrote back knowledge-contamination, source-verification, GEO-risk, and factuality-evaluation signals to risk/governance, tool-evaluation, and yearly-observation pages
+- 2026-04-28: compiled broadcast 833 from daily capture, added `Physical AI And Robotics`, and wrote back physical-AI evaluation/adoption signals to tool-evaluation, workplace-adoption, and tooling/workflow maps

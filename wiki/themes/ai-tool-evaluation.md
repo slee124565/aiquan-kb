@@ -26,6 +26,7 @@
 - 評估大模型發布時，不能只看官方 benchmark；還要同步檢查底層基建路線、長上下文與 coding / agent 能力、API 成本、開源可用性，以及後續第三方實測是否支持官方敘事
 - 當工具會生成或放大高可信度媒介時，評估不能只看能力，也要看濫用門檻、驗證流程、弱勢群體傷害、平台規則與責任鏈
 - 評估模型的 factuality / 搜索 / 醫療問答能力時，要區分「答對已被廣泛報導的 debunk 題」和「能核驗低熱度、半真半假、專業格式包裝的可疑資訊」；後者才更接近真實風險。
+- 評估物理 AI 或機器人突破時，不能只看展示動作或勝負標題；要檢查它是否遵守真實規則、處理最難子任務、完成 sim-to-real、面對陌生對手或物料，並暴露可復現的 edge cases。
 
 ## Representative Broadcasts
 
@@ -133,6 +134,7 @@
 - [830](../broadcasts/830.md)
 - [831](../broadcasts/831.md)
 - [832](../broadcasts/832.md)
+- [833](../broadcasts/833.md)
 - [775](../broadcasts/775.md)
 - [776](../broadcasts/776.md)
 
@@ -149,9 +151,11 @@
 - 工具課文中哪些評估標準最常重複出現
 - 哪些工具其實只是案例載體，真正值得留下的是工作方法
 - 何時應把「多候選比較 + 人類回饋」視為核心評估流程，而不是額外成本
+- 物理 AI demo 何時可以被視為真實部署前兆，何時仍只是受控展示？
 
 ## Related Pages
 
 - [AI Tooling And Adoption](../maps/ai-tooling-and-adoption.md)
 - [AI Knowledge Management](../maps/ai-knowledge-management.md)
 - [AI Risk And Governance](../maps/ai-risk-and-governance.md)
+- [Physical AI And Robotics](physical-ai-and-robotics.md)

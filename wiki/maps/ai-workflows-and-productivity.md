@@ -7,10 +7,12 @@
 ## Entry Points
 
 - [AI Workplace Adoption](../themes/ai-workplace-adoption.md)
+- [Physical AI And Robotics](../themes/physical-ai-and-robotics.md)
 
 ## Core Themes
 
 - ai workplace adoption
+- physical ai and robotics
 
 ## Key Playbooks
 
@@ -88,6 +90,7 @@
 - [826](../broadcasts/826.md)
 - [829](../broadcasts/829.md)
 - [831](../broadcasts/831.md)
+- [833](../broadcasts/833.md)
 
 ## Open Threads
 
@@ -99,3 +102,4 @@
 - 哪些決策型工作其實已經同時具備高頻資料、感測能力與閉環回饋，足以讓 AI 從助手升級成主要判斷者
 - 哪些內容或設計任務，已經值得從 `人工拼接多工具` 改成 `AI 先出成套草案、人類主做 QA 與挑選`
 - 多智能體協作進入白領流程後，哪些任務應該拆成 AI 角色分工，哪些審查與問責節點必須保留給人
+- 當 AI 從軟體工作流進入機械臂、產線、醫療或交通現場時，哪些流程重畫必須同步納入硬體、安全與責任鏈

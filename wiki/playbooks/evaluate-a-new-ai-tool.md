@@ -26,6 +26,7 @@
 12. 若它是新發布的大模型，不要只看官方榜單；用真實長文、AI coding、agent 工具替換與 API 成本測試，把基礎設施路線、開源可用性、穩定性和第三方實測一起納入判斷
 13. 若它會生成或改寫圖片、聲音、影片、身份資訊、金融/健康建議或高風險內容，把濫用、深偽、詐騙、隱私和責任鏈納入評估；不要只因輸出更逼真或更自動化就判定值得採用
 14. 若它主打 factuality、AI 搜索、醫療問答或引用能力，不要只用熱門假資訊案例測試；加入低熱度、半真半假、格式專業但結論可疑的樣本，並要求它說明來源核驗路徑。
+15. 若它控制或影響物理世界，不要只看 demo 影片；檢查真實規則、感測延遲、閉環控制、sim-to-real、陌生場景、edge cases、安全護欄與事故責任鏈。
 
 ## Signals From Broadcasts
 
@@ -82,6 +83,7 @@
 - [830](../broadcasts/830.md)
 - [831](../broadcasts/831.md)
 - [832](../broadcasts/832.md)
+- [833](../broadcasts/833.md)
 
 ## Boundaries
 
@@ -93,3 +95,4 @@
 - [AI Tool Evaluation](../themes/ai-tool-evaluation.md)
 - [AI Tooling And Adoption](../maps/ai-tooling-and-adoption.md)
 - [AI Risk And Governance](../themes/ai-risk-and-governance.md)
+- [Physical AI And Robotics](../themes/physical-ai-and-robotics.md)
