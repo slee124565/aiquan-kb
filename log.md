@@ -42,3 +42,4 @@
 - 2026-04-26: compiled broadcast 831 from daily capture, added AI risk/governance theme and map, and wrote back yearly-observation, tool-evaluation, workplace-adoption, and workflow signals
 - 2026-04-27: compiled broadcast 832 from daily capture, and wrote back knowledge-contamination, source-verification, GEO-risk, and factuality-evaluation signals to risk/governance, tool-evaluation, and yearly-observation pages
 - 2026-04-28: compiled broadcast 833 from daily capture, added `Physical AI And Robotics`, and wrote back physical-AI evaluation/adoption signals to tool-evaluation, workplace-adoption, and tooling/workflow maps
+- 2026-04-29: compiled broadcast 834 from daily capture, and wrote back personal high-risk knowledge-base, AI second-opinion, medical workflow, and governance signals to knowledge-management, tool-evaluation, risk/governance, workflow playbook, and maps
