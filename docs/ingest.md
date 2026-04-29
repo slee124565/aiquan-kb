@@ -2,7 +2,7 @@
 
 **目標**
 
-把 `快刀廣播站` 新課文穩定地從「剛看到」推進到「已納入知識庫」。
+把 `快刀廣播站` 新課文穩定地從「剛看到」推進到「已納入知識庫」。外部 AI 案例也可以進入，但必須明確標示為 `external-case-study`，並服務既有主題或方法頁。
 
 **日更流程**
 
@@ -11,6 +11,7 @@
 2. 判斷 `broadcast_id`
    - 預設取檔名開頭數字
    - 若沒有穩定數字，改用 `special-YYYYMMDD-<slug>`
+   - 若是外部 AI 案例，使用 `special-YYYYMMDD-<slug>`，並標示 `source_kind: external-case-study`
 3. 將來源複製到 `raw/inbox/` 或 `raw/sources/YYYY/`
 4. 補最小 metadata
    - title
@@ -95,6 +96,32 @@
 預設流程應理解為：
 
 `fetch page -> raw source -> agent compile -> writeback`
+
+**External Case Study Convention**
+
+`aiquan-kb` 可以收外部 AI 案例、影片、訪談、文章或本地 reading article，但它們是補充案例，不是主線日更。
+
+收錄條件：
+
+- 能補強既有 AI workflow、tool evaluation、workplace adoption、learning、knowledge-management 或 governance 判準
+- 有清楚 provenance，例如原始 URL、workspace path、transcript package 或 captured source
+- 能明確指出要回寫到哪些既有 theme / playbook / map
+- 不是純剪藏、純新聞、純工具名單
+
+命名：
+
+- raw source: `raw/sources/YYYY/special-YYYYMMDD-<slug>.md`
+- compiled card: `wiki/broadcasts/special-YYYYMMDD-<slug>.md`
+- metadata 必須包含 `source_kind: external-case-study`
+- `source_path` 保留本地原始路徑或外部 URL
+- 若有影片、transcript package、secondary reading article，全部保留在 metadata 或 Source 區塊
+
+編譯策略：
+
+- 仍放在 `wiki/broadcasts/`，因為它承擔單篇 source -> compiled card 的角色
+- `Relation To Existing Pages` 必須優先指向既有 theme / playbook / map
+- 除非外部案例累積到多篇，否則不要為單篇外部案例新增獨立 theme
+- `log.md` 要寫明這是 external case study ingest
 
 **命名建議**
 

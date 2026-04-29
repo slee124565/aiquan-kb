@@ -1,9 +1,10 @@
 ---
 id: markdown-broadcast-ingest
-purpose: classify and ingest a markdown broadcast source while preserving provenance and deciding write targets
+purpose: classify and ingest a markdown broadcast or external AI case source while preserving provenance and deciding write targets
 use_when:
   - the source already exists as a markdown file
   - the source comes from an external workspace or local markdown source
+  - the source is an external AI case study that should supplement existing repo themes or playbooks
 inputs:
   - source path
   - why it should enter the repo
@@ -33,16 +34,19 @@ tags:
 
 把新來源從「存在於 workspace」推進到 `raw/` + `wiki/broadcasts/`，並判斷它應該連到哪些既有 theme / playbook / series。
 
+若來源不是 `快刀廣播站`，請使用 `source_kind: external-case-study`，並確認它是補強既有 AI workflow / adoption / tool-evaluation / learning / governance 主題，而不是泛用剪藏。
+
 ## Prompt
 
 ```md
-幫我 ingest 這篇快刀廣播站課文到 repo。
+幫我 ingest 這篇 markdown source 到 repo。
 
 來源 path：______
 我覺得它重要，因為 ______。
 
 請先：
 - 判斷它的 `broadcast_id`
+  - 若是外部 AI 案例，用 `special-YYYYMMDD-<slug>`
 - 建議 canonical filename
 - 檢查 repo 裡是否已有高度重複的 broadcast、theme、playbook 或 series
   - 引用任何既有內容時，不要只寫 id 或頁名

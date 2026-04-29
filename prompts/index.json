@@ -95,11 +95,12 @@
     {
       "id": "markdown-broadcast-ingest",
       "path": "prompts/markdown-broadcast-ingest.md",
-      "title": "Markdown Broadcast Ingest",
-      "purpose": "classify and ingest a markdown broadcast source while preserving provenance and deciding write targets",
+      "title": "Markdown Broadcast Or Case Study Ingest",
+      "purpose": "classify and ingest a markdown broadcast or external AI case source while preserving provenance and deciding write targets",
       "use_when": [
         "the source already exists as a markdown file",
-        "the source comes from an external browser capture or local markdown source"
+        "the source comes from an external browser capture or local markdown source",
+        "the source is an external AI case study that should supplement existing repo themes or playbooks"
       ],
       "inputs": [
         "source path",

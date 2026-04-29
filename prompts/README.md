@@ -81,7 +81,7 @@ frontmatter schema：
 - [daily-broadcast-ingest-and-discuss.md](daily-broadcast-ingest-and-discuss.md)
   日更模式主入口：收錄一篇新課文，並立刻用既有 KB 做 discussion-ready 回覆
 - [markdown-broadcast-ingest.md](markdown-broadcast-ingest.md)
-  從現有 markdown 課文 ingest
+  從現有 markdown 課文或外部 AI case study ingest
 - [ingest-review.md](ingest-review.md)
   回顧今天 new ingest 的增量、重複與 merge 建議
 - [compare-broadcast-to-existing.md](compare-broadcast-to-existing.md)

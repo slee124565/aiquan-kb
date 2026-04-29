@@ -28,6 +28,7 @@
 14. 若它主打 factuality、AI 搜索、醫療問答或引用能力，不要只用熱門假資訊案例測試；加入低熱度、半真半假、格式專業但結論可疑的樣本，並要求它說明來源核驗路徑。
 15. 若它控制或影響物理世界，不要只看 demo 影片；檢查真實規則、感測延遲、閉環控制、sim-to-real、陌生場景、edge cases、安全護欄與事故責任鏈。
 16. 若它被用作個人健康、醫療照護或其他高風險第二意見，測試重點應放在個人資料整合、長期趨勢、異常提示、追問品質、升級建議與專業核驗流程，而不是單次回答是否聽起來權威。
+17. 若它服務內容生產，不要只評估最終畫面或文案；也要測試它是否降低選題搜索、前期對齊、後期繁瑣處理、素材檢索、數據復盤與跨部門溝通成本。能產生可審核中間物的工具，可能比直接生成成品更值得導入。
 
 ## Signals From Broadcasts
 
@@ -86,6 +87,7 @@
 - [832](../broadcasts/832.md)
 - [833](../broadcasts/833.md)
 - [834](../broadcasts/834.md)
+- [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 
 ## Boundaries
 

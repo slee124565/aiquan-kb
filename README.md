@@ -1,18 +1,19 @@
 # aiquan-kb
 
-一個專門用來承接 `AI学习圈 / 快刀廣播站` 課文、並持續編譯成可查詢知識庫的 repo。
+一個以 `AI学习圈 / 快刀廣播站` 課文為主要輸入、同時可承接高價值外部 AI 案例的可查詢知識庫 repo。
 
 這個 repo 的 operating model 基於 [llm-wiki-kb](https://github.com/slee124565/llm-wiki-kb) 與 [my-llm-kb](https://github.com/slee124565/my-llm-kb) 的 agent-compiler 設計，但它不是 LLM 研究文章庫的複製版，而是針對「日更課程廣播、案例、工具玩法、課程欄目與學員實作訊號」做了專門分層。
 
 **這個 repo 解的問題**
 
-`快刀廣播站` 的單篇課文有幾種典型價值同時存在：
+`快刀廣播站` 的單篇課文是主要來源；外部 AI 文章、影片、案例或本地 reading article 則作為補充證據進入。它們有幾種典型價值同時存在：
 
 - AI 新聞與產業動態
 - 工具用法與實作技巧
 - 產品、教育、管理、組織等主題觀察
 - 課程欄目與系列活動的上下文
 - 學員應如何把內容轉成可行動方法
+- 外部案例如何修正或強化既有 AI workflow 判準
 
 如果只把課文存成單篇摘要，最後會得到一堆彼此孤立的文章卡片；但如果全部直接 merge 成大主題頁，又會失去課程節奏、欄目脈絡與 provenance。
 
@@ -186,6 +187,8 @@
 
 - `special-YYYYMMDD-<slug>.md`
 
+若來源是外部 AI 案例，仍使用 `special-YYYYMMDD-<slug>.md`，並在 raw 與 compiled card metadata 標示 `source_kind: external-case-study`。這類內容只能作為既有 theme / playbook / map 的補充案例進入，不應取代 `快刀廣播站` 作為主線輸入。
+
 所有原始中文標題、來源日期、workspace path，都保留在檔案 metadata 中。
 
 **與現有 workspace 的關係**
@@ -205,6 +208,7 @@
 這個 repo 應聚焦在：
 
 - `AI学习圈 / 快刀廣播站` 課文與欄目內容
+- 高價值外部 AI case study 對既有課程主題的補強
 - 可重用知識頁的編譯
 - 可重用實作方法的萃取
 - 系列欄目脈絡與主題導航

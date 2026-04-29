@@ -2,7 +2,9 @@
 
 ## Repo Purpose
 
-這是一個用來承接 `AI学习圈 / 快刀廣播站` 日更課文、並由 agent 持續編譯與維護的知識庫 repo。
+這是一個用來承接 `AI学习圈 / 快刀廣播站` 日更課文、並由 agent 持續編譯與維護的 AI case library repo。
+
+`快刀廣播站` 仍是主要輸入來源；外部 AI 案例、影片、文章或本地 reading article 也可用 `external-case-study` 方式進入，但必須服務既有 AI workflow / adoption / tool-evaluation / learning / governance 主題，而不是把 repo 變成泛用剪藏庫。
 
 它的核心不是收藏課文，而是把課文逐步編譯成：
 
@@ -61,6 +63,7 @@
 - 預設以 `broadcast_id` 作為課文的 canonical key。
 - `broadcast_id` 可直接來自課文檔名開頭的數字，例如 `812`。
 - 若是加餐、特刊或無固定編號內容，可使用 `special-YYYYMMDD-<slug>`。
+- 若是外部 AI 案例，使用 `special-YYYYMMDD-<slug>`，並在 metadata 標示 `source_kind: external-case-study`。
 - 不要把中文長標題直接當成 canonical filename。
 
 ## Source-of-Truth Rules
@@ -139,6 +142,13 @@
 
 - 將內容複製到 `raw/sources/YYYY/`，讓 `raw/` 成為此 repo 的 source of truth
 - 在 broadcast card 的 source metadata 裡保留原始 workspace path，避免 provenance 斷裂
+
+若來源不是 `快刀廣播站`，還要明確標示：
+
+- `source_kind: external-case-study`
+- 原始 URL 或 workspace path
+- 它為什麼值得進入本 repo
+- 它應回寫到哪些既有 theme / playbook / map，而不是新增平行分類
 
 ## Query Rule
 

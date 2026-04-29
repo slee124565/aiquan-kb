@@ -92,6 +92,7 @@
 - [831](../broadcasts/831.md)
 - [833](../broadcasts/833.md)
 - [834](../broadcasts/834.md)
+- [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 
 ## Open Threads
 
@@ -105,3 +106,4 @@
 - 多智能體協作進入白領流程後，哪些任務應該拆成 AI 角色分工，哪些審查與問責節點必須保留給人
 - 當 AI 從軟體工作流進入機械臂、產線、醫療或交通現場時，哪些流程重畫必須同步納入硬體、安全與責任鏈
 - 個人高風險工作流如何從 `問 AI 一個答案` 升級成 `資料整理 -> 異常發現 -> 專家提問 -> 第二意見 -> 核驗回寫`
+- 內容生產團隊如何把 AI 放在選題、對齊、後期、復盤與內部工具這些中間層，而不是急著讓 AI 直接替代最終創作與品牌信任
