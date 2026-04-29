@@ -94,6 +94,8 @@
 - [806](../broadcasts/806.md)
 - [824](../broadcasts/824.md)
 - [827](../broadcasts/827.md)
+- [special-20260429-ai-era-reading-standards](../broadcasts/special-20260429-ai-era-reading-standards.md)
+- [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
 
 ## Open Threads
 
@@ -101,3 +103,4 @@
 - AI 編程與 role-based workflow 教學，是否應在此 map 下分出更細入口
 - 哪些內容足以把「學習自举效应」從零散觀察提升成穩定入口
 - 哪些案例足以把 AI 時代的 assessment redesign 變成教育線的穩定子主題
+- AI 時代的閱讀與研究訓練，是否應把一手經驗、作者動機與思考證明列為固定判準

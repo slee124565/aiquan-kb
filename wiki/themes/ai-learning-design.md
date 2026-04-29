@@ -20,6 +20,8 @@
 - 若新人過早把基礎動作交給 AI，學習路徑可能被截斷，設計教學時要保留練習與判斷的機會
 - 當 AI 足以代寫高完成度作業時，教學設計不能只優化輸出品質，還要重設 assessment，讓學生能在追問、答辯與現場推理裡證明自己真的理解
 - 高品質訪談、案例庫與知識庫若能被 AI 助手讀取，會從被動材料變成可持續回放與校正判準的學習資產
+- AI 時代的學習還需要信息品味訓練：讀者要能判斷一篇文章是否有一手經驗、思考證明、清楚動機與現實影響，而不是只看摘要是否完整
+- 個人 AI 能力升級常在真實任務中突破平台期；把自己的資料夾交給 AI 做知識圖譜、索引或研究整理，比只看教程更容易形成可遷移經驗
 
 ## Representative Broadcasts
 
@@ -93,6 +95,8 @@
 - [806](../broadcasts/806.md)
 - [824](../broadcasts/824.md)
 - [827](../broadcasts/827.md)
+- [special-20260429-ai-era-reading-standards](../broadcasts/special-20260429-ai-era-reading-standards.md)
+- [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
 - [734](../broadcasts/734.md)
 - [735](../broadcasts/735.md)
 - [736](../broadcasts/736.md)
@@ -115,6 +119,7 @@
 - 哪些共學設計值得萃取成獨立 playbook
 - repo 是否該把「AI 學習的自举效应」整理成更清楚的能力升級方法
 - 哪些教育案例已足以把 assessment redesign 從一般 learning-design 討論裡獨立出來
+- 信息品味與來源選材是否應成為 AI 學習設計中的固定訓練項，而不是只在風險治理裡討論
 
 ## Related Pages
 

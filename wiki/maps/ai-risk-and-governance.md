@@ -38,6 +38,7 @@
 - [831](../broadcasts/831.md)
 - [832](../broadcasts/832.md)
 - [834](../broadcasts/834.md)
+- [special-20260429-ai-era-reading-standards](../broadcasts/special-20260429-ai-era-reading-standards.md)
 
 ## Open Threads
 
@@ -47,3 +48,4 @@
 - 哪些風險是工具評估時必須提前測的，哪些更適合在 team action 或 workflow redesign 階段治理
 - 面對 GEO、學術引用與專業格式包裝的假資訊，如何把 AI 回答重新接回可核驗來源
 - 在醫療、法律、財務等個人高風險決策裡，如何把 AI 定位為第二意見與預警，而不是替代專業責任鏈
+- 在日常閱讀與研究裡，如何把作者動機、一手觀察與思考證明納入信息素養，而不是只做真假核查

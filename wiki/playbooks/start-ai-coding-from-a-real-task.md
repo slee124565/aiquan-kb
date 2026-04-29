@@ -18,6 +18,7 @@
 4. 優先理解與當前任務直接相關的概念
 5. 任務跑通後，再回補更一般化的知識
 6. 當新的 coding 模型出現時，用同一個小工具、同一段報錯、同一個 agent 任務重跑一次；比較交付品質、修改輪次與是否降低返工，而不是只看模型榜單
+7. 當任務是整理大量本地文件時，讓 AI coding 工具先生成索引、entity / relationship 與 source summary，再用具體查詢驗證它是否真的改善 retrieval
 
 ## Signals From Broadcasts
 
@@ -27,6 +28,7 @@
 - [556](../broadcasts/556.md)
 - [597](../broadcasts/597.md)
 - [830](../broadcasts/830.md)
+- [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
 
 ## Boundaries
 
