@@ -30,6 +30,7 @@
 16. 若它被用作個人健康、醫療照護或其他高風險第二意見，測試重點應放在個人資料整合、長期趨勢、異常提示、追問品質、升級建議與專業核驗流程，而不是單次回答是否聽起來權威。
 17. 若它服務內容生產，不要只評估最終畫面或文案；也要測試它是否降低選題搜索、前期對齊、後期繁瑣處理、素材檢索、數據復盤與跨部門溝通成本。能產生可審核中間物的工具，可能比直接生成成品更值得導入。
 18. 若它主打知識圖譜、長上下文或本地知識庫能力，用一個真實文件夾測它能否抽出可靠 entity / relationship、回指原始來源、降低上下文搬運，並幫你推進一個具體研究問題。
+19. 若評估的是團隊或公司層 AI adoption，不要把使用量指標當成唯一證據；同時檢查產出品質、返工下降、協作摩擦、責任邊界與是否誘發表演性使用。
 
 ## Signals From Broadcasts
 
@@ -90,6 +91,7 @@
 - [834](../broadcasts/834.md)
 - [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 - [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
+- [835](../broadcasts/835.md)
 
 ## Boundaries
 

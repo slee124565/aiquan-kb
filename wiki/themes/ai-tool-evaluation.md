@@ -30,6 +30,7 @@
 - 評估面向個人健康或高風險生活決策的 AI 時，不只問它答得像不像專家，還要看它能否整合個人連續資料、指出異常與矛盾、提示下一步提問，並把結果導回專業核驗。
 - 評估內容生產 AI 工具時，不要只看它能否生成更酷的畫面；也要看它是否能降低前期對齊、後期繁瑣工序、資料檢索、營運復盤與跨部門溝通成本。很多高價值 AI 並不直接生成成品，而是讓中間流程更可見、更可審核。
 - 評估知識圖譜、長上下文或本地知識庫工具時，不要只看視覺化效果；要測它是否能降低 context 搬運成本、定位原始來源、發現跨文檔關係並推進下一個研究問題。
+- 評估組織級 AI adoption 時，不能把 token 消耗、工具打開次數或 AI 使用排行榜直接當成生產力；錯誤指標會激勵表演性使用，而不是更好的工作結果。
 
 ## Representative Broadcasts
 
@@ -141,6 +142,7 @@
 - [834](../broadcasts/834.md)
 - [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 - [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
+- [835](../broadcasts/835.md)
 - [775](../broadcasts/775.md)
 - [776](../broadcasts/776.md)
 
@@ -160,6 +162,7 @@
 - 物理 AI demo 何時可以被視為真實部署前兆，何時仍只是受控展示？
 - 哪些非生成型或中間層 AI 工具，雖然不炫目，卻能穩定降低內容生產的返工、對齊與復盤成本？
 - 知識圖譜工具的最小有效評估任務應如何設計，才能證明它真的改善 retrieval 而不是只增加一層結構？
+- 組織把 AI 使用納入績效時，哪些指標能代表真實產出改善，哪些只是在製造 `Tokenmaxxing`？
 
 ## Related Pages
 

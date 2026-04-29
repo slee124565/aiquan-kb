@@ -35,6 +35,7 @@
 - 當 AI 應用引發詐騙、深度偽造、社會反彈或高風險問責問題時，治理成本本身就是 adoption 成本，不能把它放在效率測算之外
 - 當 AI 進入物理世界，adoption 不再只是軟體流程接入；還要同時評估感測延遲、硬體可靠性、閉環控制、sim-to-real 落差、安全護欄、現場維護與事故責任鏈
 - 外部內容團隊案例顯示，成熟 adoption 往往不是把 AI 推到最終成品位，而是把它放進選題、對齊、後期、復盤與內部工具這些中間生產層，同時保留真人判斷、真實拍攝與品牌信任邊界
+- AI 導入也會重估人才結構：盈利企業可能不是因為活不下去才裁員，而是把高成本資深人力重新配置為 AI 基礎設施、低人力交付與新型能力組合
 
 ## Representative Broadcasts
 
@@ -123,6 +124,7 @@
 - [831](../broadcasts/831.md)
 - [833](../broadcasts/833.md)
 - [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
+- [835](../broadcasts/835.md)
 
 ## Related Playbooks
 
@@ -141,6 +143,7 @@
 - 哪些 broadcast 已足以支撐一條更清楚的「AI 翻譯層角色」方法線
 - 哪些物理 AI 場景已經跨過 demo 門檻，足以進入產線、醫療、交通或服務業工作流重畫？
 - 內容團隊的 AI adoption，哪些節點應優先作為內部中間層，哪些節點可以安全地進入觀眾或客戶可見的成品層？
+- 當企業用 AI 轉型解釋裁員、買斷或績效重估時，應如何分辨真實任務替代、資本重配置、法律風險管理與管理敘事？
 
 ## Related Pages
 
