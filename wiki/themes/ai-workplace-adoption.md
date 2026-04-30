@@ -36,6 +36,7 @@
 - 當 AI 進入物理世界，adoption 不再只是軟體流程接入；還要同時評估感測延遲、硬體可靠性、閉環控制、sim-to-real 落差、安全護欄、現場維護與事故責任鏈
 - 外部內容團隊案例顯示，成熟 adoption 往往不是把 AI 推到最終成品位，而是把它放進選題、對齊、後期、復盤與內部工具這些中間生產層，同時保留真人判斷、真實拍攝與品牌信任邊界
 - AI 導入也會重估人才結構：盈利企業可能不是因為活不下去才裁員，而是把高成本資深人力重新配置為 AI 基礎設施、低人力交付與新型能力組合
+- 物理 AI 進入工作現場時，應把缺工壓力、場地改造成本、任務邊界、人工接管與連續運行穩定性一起納入 adoption 判斷；能少改 brownfield 現場，本身可能就是價值
 
 ## Representative Broadcasts
 
@@ -125,6 +126,7 @@
 - [833](../broadcasts/833.md)
 - [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 - [835](../broadcasts/835.md)
+- [836](../broadcasts/836.md)
 
 ## Related Playbooks
 

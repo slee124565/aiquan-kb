@@ -31,6 +31,7 @@
 17. 若它服務內容生產，不要只評估最終畫面或文案；也要測試它是否降低選題搜索、前期對齊、後期繁瑣處理、素材檢索、數據復盤與跨部門溝通成本。能產生可審核中間物的工具，可能比直接生成成品更值得導入。
 18. 若它主打知識圖譜、長上下文或本地知識庫能力，用一個真實文件夾測它能否抽出可靠 entity / relationship、回指原始來源、降低上下文搬運，並幫你推進一個具體研究問題。
 19. 若評估的是團隊或公司層 AI adoption，不要把使用量指標當成唯一證據；同時檢查產出品質、返工下降、協作摩擦、責任邊界與是否誘發表演性使用。
+20. 若評估的是機器人或物理 AI 試點，先問它的價值是不是來自少改既有場地、補足缺工、接住重複體力任務或降低人員風險；再看任務邊界、連續運行、人工接管、維護成本與責任鏈，而不是只看單次 demo。
 
 ## Signals From Broadcasts
 
@@ -92,6 +93,7 @@
 - [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 - [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
 - [835](../broadcasts/835.md)
+- [836](../broadcasts/836.md)
 
 ## Boundaries
 

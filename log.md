@@ -46,3 +46,4 @@
 - 2026-04-29: added `external-case-study` convention, ingested the MediaStorm AI production workflow reading article as `special-20260428-mediastorm-ai-production-workflow`, and wrote back content-production adoption signals to workplace-adoption, tool-evaluation, workflow playbooks, and maps
 - 2026-04-29: ingested two `external-case-study` transcripts from 晓辉博士 as `special-20260429-ai-era-reading-standards` and `special-20260429-ai-knowledge-graph`, and wrote back information-literacy, source-selection, knowledge-graph, and AI-assisted knowledge-base signals to existing themes, playbooks, and maps
 - 2026-04-30: compiled broadcast 835 from daily capture, and wrote back AI-era workforce restructuring, adoption metric, labor-governance, and yearly-observation signals
+- 2026-05-01: compiled broadcast 836 from daily capture, and wrote back physical-AI brownfield deployment, labor-shortage, service-robotics, and workflow-redesign signals
