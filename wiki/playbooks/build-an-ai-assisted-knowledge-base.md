@@ -16,10 +16,11 @@
 2. 收進可信來源並保留 provenance
 3. 對外部材料先做來源選材：是否有一手觀察、作者動機是否清楚、是否能看見思考證明、是否會改變實際判斷
 4. 讓 AI 幫忙做摘要、標籤、初步索引，但不要放棄來源選材判斷
-5. 當文件量變大時，讓 AI 抽取 entity / concept / relationship / source summary，建立比單篇摘要更適合 agent 檢索的中間索引層
-6. 用問題來測試知識庫是否真的可用，而不是只看條目數或知識圖譜是否漂亮
-7. 把高價值回答、對比與彙整回寫進知識庫
-8. 若知識庫服務醫療、法律、財務等高風險決策，必須額外維護時間線、原始來源、異常標記、待問專家問題與人工核驗結果；AI 的角色是整理與提醒，不是最終裁決
+5. 對長訪談、長影片或大型逐字稿庫，先讓 AI 依問題檢索並生成給人讀的訪談筆記，再由人決定是否回看原始材料
+6. 當文件量變大時，讓 AI 抽取 entity / concept / relationship / source summary，建立比單篇摘要更適合 agent 檢索的中間索引層
+7. 用問題來測試知識庫是否真的可用，而不是只看條目數或知識圖譜是否漂亮
+8. 把高價值回答、對比與彙整回寫進知識庫
+9. 若知識庫服務醫療、法律、財務等高風險決策，必須額外維護時間線、原始來源、異常標記、待問專家問題與人工核驗結果；AI 的角色是整理與提醒，不是最終裁決
 
 ## Signals From Broadcasts
 
@@ -42,6 +43,7 @@
 - [701](../broadcasts/701.md)
 - [716](../broadcasts/716.md)
 - [834](../broadcasts/834.md)
+- [837](../broadcasts/837.md)
 - [special-20260429-ai-era-reading-standards](../broadcasts/special-20260429-ai-era-reading-standards.md)
 - [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
 

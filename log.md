@@ -47,3 +47,4 @@
 - 2026-04-29: ingested two `external-case-study` transcripts from 晓辉博士 as `special-20260429-ai-era-reading-standards` and `special-20260429-ai-knowledge-graph`, and wrote back information-literacy, source-selection, knowledge-graph, and AI-assisted knowledge-base signals to existing themes, playbooks, and maps
 - 2026-04-30: compiled broadcast 835 from daily capture, and wrote back AI-era workforce restructuring, adoption metric, labor-governance, and yearly-observation signals
 - 2026-05-01: compiled broadcast 836 from daily capture, and wrote back physical-AI brownfield deployment, labor-shortage, service-robotics, and workflow-redesign signals
+- 2026-05-02: compiled broadcast 837 from daily capture, and wrote back AI-assisted interview knowledge-base, infrastructure-evaluation, job/task distinction, and Jensen Huang/NVIDIA series continuation signals

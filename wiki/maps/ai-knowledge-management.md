@@ -45,6 +45,7 @@
 - [701](../broadcasts/701.md)
 - [716](../broadcasts/716.md)
 - [834](../broadcasts/834.md)
+- [837](../broadcasts/837.md)
 - [special-20260429-ai-era-reading-standards](../broadcasts/special-20260429-ai-era-reading-standards.md)
 - [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
 
@@ -54,4 +55,5 @@
 - 知識庫中的哪些責任應交給 agent，哪些不該外包
 - 高風險個人資料庫如何同時做到可追問、可核驗與可帶回專業系統
 - 外部材料進知識庫前，如何用思考證明、一手摩擦與作者動機做最低限度的來源篩選
+- 高品質長訪談庫應如何分層成 `AI 可檢索來源層`、`人類可讀筆記層` 與 `人工深讀/回寫層`
 - 當文件量超過上下文窗口時，如何用 AI 生成的 entity / relationship 層幫助 retrieval，而不是增加維護負擔

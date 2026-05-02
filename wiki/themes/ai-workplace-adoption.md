@@ -37,6 +37,8 @@
 - 外部內容團隊案例顯示，成熟 adoption 往往不是把 AI 推到最終成品位，而是把它放進選題、對齊、後期、復盤與內部工具這些中間生產層，同時保留真人判斷、真實拍攝與品牌信任邊界
 - AI 導入也會重估人才結構：盈利企業可能不是因為活不下去才裁員，而是把高成本資深人力重新配置為 AI 基礎設施、低人力交付與新型能力組合
 - 物理 AI 進入工作現場時，應把缺工壓力、場地改造成本、任務邊界、人工接管與連續運行穩定性一起納入 adoption 判斷；能少改 brownfield 現場，本身可能就是價值
+- 討論 AI 是否替代某個職業時，必須先拆開 `job` 與 `task`：AI 可能先改寫讀片、檢索、摘要或排程等任務，但職業本身還包含責任、情境判斷、現場協作與例外處理
+- AI 基礎設施的 adoption 也會被物理世界限制：資料中心不只需要晶片，還需要電力接入、冷卻、管線與熟練施工人力，這些供給無法像軟體能力一樣快速複製
 
 ## Representative Broadcasts
 
@@ -127,6 +129,7 @@
 - [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 - [835](../broadcasts/835.md)
 - [836](../broadcasts/836.md)
+- [837](../broadcasts/837.md)
 
 ## Related Playbooks
 
