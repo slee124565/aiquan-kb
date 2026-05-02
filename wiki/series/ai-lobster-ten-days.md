@@ -11,6 +11,7 @@
 ## Representative Broadcasts
 
 - [802](../broadcasts/802.md)
+- [838](../broadcasts/838.md)（OpenClaw founder-level follow-up，不是十日談正篇，但補上 creator motivation、agentic engineering 與爆紅後運營風險）
 
 ## Recurring Patterns
 
@@ -21,6 +22,7 @@
 ## What Changed Over Time
 
 - 目前已能看出，系列重心不只是介紹 OpenClaw，而是重新定義人如何與 agent 共事
+- `838` 把前面偏使用者與場景的討論，推回到創作者視角：agent 產品的爆發同時依賴好玩、工程紀律、開源社群與運營防線
 
 ## Open Threads
 

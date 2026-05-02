@@ -48,3 +48,4 @@
 - 2026-04-30: compiled broadcast 835 from daily capture, and wrote back AI-era workforce restructuring, adoption metric, labor-governance, and yearly-observation signals
 - 2026-05-01: compiled broadcast 836 from daily capture, and wrote back physical-AI brownfield deployment, labor-shortage, service-robotics, and workflow-redesign signals
 - 2026-05-02: compiled broadcast 837 from daily capture, and wrote back AI-assisted interview knowledge-base, infrastructure-evaluation, job/task distinction, and Jensen Huang/NVIDIA series continuation signals
+- 2026-05-03: compiled broadcast 838 from daily capture, and wrote back OpenClaw founder-interview signals around agentic engineering, play-driven adoption, agent tool evaluation, workflow redesign, and AI龙虾 follow-up context

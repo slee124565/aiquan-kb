@@ -94,6 +94,7 @@
 - [834](../broadcasts/834.md)
 - [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 - [836](../broadcasts/836.md)
+- [838](../broadcasts/838.md)
 
 ## Open Threads
 
@@ -109,3 +110,4 @@
 - 既有物理場地難以整體改造時，哪些任務適合用機器人補進工作流，哪些仍應用專用自動化或人工保留
 - 個人高風險工作流如何從 `問 AI 一個答案` 升級成 `資料整理 -> 異常發現 -> 專家提問 -> 第二意見 -> 核驗回寫`
 - 內容生產團隊如何把 AI 放在選題、對齊、後期、復盤與內部工具這些中間層，而不是急著讓 AI 直接替代最終創作與品牌信任
+- 當 agent 能跨 App、瀏覽器與本地工具完成任務時，哪些工作流應從 `人工操作多個軟體` 改成 `agent 操作慢 API + 人類驗收與回滾`？
