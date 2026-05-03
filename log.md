@@ -49,3 +49,4 @@
 - 2026-05-01: compiled broadcast 836 from daily capture, and wrote back physical-AI brownfield deployment, labor-shortage, service-robotics, and workflow-redesign signals
 - 2026-05-02: compiled broadcast 837 from daily capture, and wrote back AI-assisted interview knowledge-base, infrastructure-evaluation, job/task distinction, and Jensen Huang/NVIDIA series continuation signals
 - 2026-05-03: compiled broadcast 838 from daily capture, and wrote back OpenClaw founder-interview signals around agentic engineering, play-driven adoption, agent tool evaluation, workflow redesign, and AI龙虾 follow-up context
+- 2026-05-04: compiled broadcast 839 from daily capture, added `Validate A One-Person AI Business` and `高质量访谈推荐`, and wrote back one-person-company validation, paid-demand-first workflow, supplier-risk, and personal carrying-cost signals

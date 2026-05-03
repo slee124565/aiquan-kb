@@ -20,6 +20,7 @@
 6. 當新的 coding 模型出現時，用同一個小工具、同一段報錯、同一個 agent 任務重跑一次；比較交付品質、修改輪次與是否降低返工，而不是只看模型榜單
 7. 當任務是整理大量本地文件時，讓 AI coding 工具先生成索引、entity / relationship 與 source summary，再用具體查詢驗證它是否真的改善 retrieval
 8. 使用 coding agent 時，避免把成熟度誤判成更多 agent、更多命令或更長流程；先用簡短但高密度的目標、相關檔案、約束與驗收標準，讓 agent 知道該去哪裡工作、不能破壞什麼、怎樣算完成。
+9. 若目標是 AI 小產品或一人公司，不要把「開始 coding」等同於「開始創業」；先用手工履約或最小交易確認有人願意付錢，再讓 AI coding 接手自動化。
 
 ## Signals From Broadcasts
 
@@ -31,6 +32,7 @@
 - [830](../broadcasts/830.md)
 - [special-20260429-ai-knowledge-graph](../broadcasts/special-20260429-ai-knowledge-graph.md)
 - [838](../broadcasts/838.md)
+- [839](../broadcasts/839.md)
 
 ## Boundaries
 

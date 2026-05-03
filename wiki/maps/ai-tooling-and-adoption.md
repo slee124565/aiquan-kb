@@ -24,6 +24,7 @@
 
 - [Evaluate A New AI Tool](../playbooks/evaluate-a-new-ai-tool.md)
 - [Turn A Broadcast Into Team Action](../playbooks/turn-a-broadcast-into-team-action.md)
+- [Validate A One-Person AI Business](../playbooks/validate-a-one-person-ai-business.md)
 
 ## Relevant Series
 
@@ -186,6 +187,7 @@
 - [836](../broadcasts/836.md)
 - [837](../broadcasts/837.md)
 - [838](../broadcasts/838.md)
+- [839](../broadcasts/839.md)
 
 ## Open Threads
 
@@ -204,3 +206,4 @@
 - 當 AI adoption 被納入人事、績效與裁員敘事時，如何避免把工具使用量誤讀成真實生產力？
 - AI 基礎設施判讀是否需要獨立入口，把晶片、軟體棧、資料中心施工、能源、benchmark、出口管制與生態依賴放在同一張圖裡？
 - Agent 工具評估是否需要固定測試「遇到障礙時如何自救」：未知格式、缺工具、封閉介面、瀏覽器操作、權限邊界與人工確認都應納入，而不是只看成功 demo。
+- AI 個人產品或 agent workflow 的評估，是否應固定加入「付費驗證早於自動化」與「供應商/API 成本壓力測試」？

@@ -21,6 +21,7 @@
 - [Make Presentation Visuals With ChatGPT Images](../playbooks/make-presentation-visuals-with-chatgpt-images.md)
 - [把內部 AI 落地經驗產品化](../playbooks/turn-internal-ai-adoption-into-external-service.md)
 - [Start AI Coding From A Real Task](../playbooks/start-ai-coding-from-a-real-task.md)
+- [Validate A One-Person AI Business](../playbooks/validate-a-one-person-ai-business.md)
 
 ## Relevant Series
 
@@ -95,6 +96,7 @@
 - [special-20260428-mediastorm-ai-production-workflow](../broadcasts/special-20260428-mediastorm-ai-production-workflow.md)
 - [836](../broadcasts/836.md)
 - [838](../broadcasts/838.md)
+- [839](../broadcasts/839.md)
 
 ## Open Threads
 
@@ -111,3 +113,4 @@
 - 個人高風險工作流如何從 `問 AI 一個答案` 升級成 `資料整理 -> 異常發現 -> 專家提問 -> 第二意見 -> 核驗回寫`
 - 內容生產團隊如何把 AI 放在選題、對齊、後期、復盤與內部工具這些中間層，而不是急著讓 AI 直接替代最終創作與品牌信任
 - 當 agent 能跨 App、瀏覽器與本地工具完成任務時，哪些工作流應從 `人工操作多個軟體` 改成 `agent 操作慢 API + 人類驗收與回滾`？
+- 一人公司式 AI workflow 應如何從 `手工付費驗證` 走到 `部分自動化`，並同步管理供應商成本、收入波動和個人承載力？

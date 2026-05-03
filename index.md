@@ -26,6 +26,7 @@
 - [把內部 AI 落地經驗產品化](wiki/playbooks/turn-internal-ai-adoption-into-external-service.md)
 - [Start AI Coding From A Real Task](wiki/playbooks/start-ai-coding-from-a-real-task.md)
 - [Turn A Broadcast Into Team Action](wiki/playbooks/turn-a-broadcast-into-team-action.md)
+- [Validate A One-Person AI Business](wiki/playbooks/validate-a-one-person-ai-business.md)
 
 ## Recurring Series
 - [DeepSeek 开源周](wiki/series/deepseek-open-source-week.md)
@@ -36,6 +37,7 @@
 - [教程上新](wiki/series/tutorial-launches.md)
 - [周日荐书与荐文](wiki/series/weekend-recommendations.md)
 - [年度观察](wiki/series/yearly-observations.md)
+- [高质量访谈推荐](wiki/series/high-quality-interview-recommendations.md)
 
 ## Anchor Broadcasts
 
